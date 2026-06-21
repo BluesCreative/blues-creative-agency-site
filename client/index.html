@@ -3,10 +3,29 @@
 
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Blue's Creative Agency</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Blue's Creative Agency - Design, Branding & Web Development</title>
+    <meta name="description" content="Blue's Creative Agency transforms ideas into digital experiences. We offer branding, web design, digital development, content creation, and AI solutions." />
+    <meta name="keywords" content="creative agency, web design, branding, digital development, AI solutions, web development" />
+    <meta name="author" content="Blue's Creative Agency" />
+    <meta name="theme-color" content="#0A1525" />
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Blue's Creative Agency - Where Creativity Meets Technology" />
+    <meta property="og:description" content="Transform your ideas into digital experiences with our creative agency services." />
+    <meta property="og:url" content="https://bluescreativeagency.com" />
+    <meta property="og:site_name" content="Blue's Creative Agency" />
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Blue's Creative Agency" />
+    <meta name="twitter:description" content="Design, branding, web development and AI solutions for your brand." />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bluescreativeagency.com" />
+    
+    <!-- Preconnect to External Resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -15,10 +34,26 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+    <script defer src="%VITE_ANALYTICS_ENDPOINT%/umami" data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Blue's Creative Agency",
+      "url": "https://bluescreativeagency.com",
+      "description": "Creative agency offering design, branding, web development, digital content, and AI solutions",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+57-313-762-1044",
+        "contactType": "Customer Service"
+      },
+      "sameAs": [
+        "https://instagram.com/bluescreativeagency"
+      ]
+    }
+    </script>
   </body>
 
 </html>
