@@ -1,6 +1,6 @@
-import { eq } from "drizzle-orm";
+import { eq, desc } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { InsertUser, users, InsertContactSubmission, contactSubmissions, InsertChatMessage, chatMessages } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -89,4 +89,76 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-// TODO: add feature queries here as your schema grows.
+// Contact form functions
+export async function createContactSubmission(submission: InsertContactSubmission) {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot create contact submission: database not available");
+    return null;
+  }
+
+  try {
+    const result = await db.insert(contactSubmissions).values(submission);
+    return result;
+  } catch (error) {
+    console.error("[Database] Failed to create contact submission:", error);
+    throw error;
+  }
+}
+
+export async function getRecentContactSubmissions(limit: number = 10) {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot get contact submissions: database not available");
+    return [];
+  }
+
+  try {
+    const result = await db
+      .select()
+      .from(contactSubmissions)
+      .orderBy(desc(contactSubmissions.createdAt))
+      .limit(limit);
+    return result;
+  } catch (error) {
+    console.error("[Database] Failed to get contact submissions:", error);
+    return [];
+  }
+}
+
+// Chat message functions
+export async function saveChatMessage(message: InsertChatMessage) {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot save chat message: database not available");
+    return null;
+  }
+
+  try {
+    const result = await db.insert(chatMessages).values(message);
+    return result;
+  } catch (error) {
+    console.error("[Database] Failed to save chat message:", error);
+    throw error;
+  }
+}
+
+export async function getChatHistory(sessionId: string) {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot get chat history: database not available");
+    return [];
+  }
+
+  try {
+    const result = await db
+      .select()
+      .from(chatMessages)
+      .where(eq(chatMessages.sessionId, sessionId))
+      .orderBy(chatMessages.createdAt);
+    return result;
+  } catch (error) {
+    console.error("[Database] Failed to get chat history:", error);
+    return [];
+  }
+}
