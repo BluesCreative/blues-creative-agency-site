@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import { Send, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
+import { Send, Loader2, CheckCircle, AlertCircle, Mail, Phone, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { trpc } from '@/lib/trpc';
+import { useState } from 'react';
 
 const translations = {
   es: {
@@ -26,6 +26,10 @@ const translations = {
     errorMessage: 'Por favor intenta de nuevo más tarde.',
     whatsapp: 'O contáctanos por WhatsApp',
     whatsappBtn: 'Enviar WhatsApp',
+    contactMethods: 'Métodos de Contacto',
+    emailContact: 'contacto@bluescreativeagency.com',
+    phoneContact: '+57 313 762 1044',
+    responseTime: 'Respuesta en 24 horas',
   },
   en: {
     title: 'Get in Touch',
@@ -46,6 +50,10 @@ const translations = {
     errorMessage: 'Please try again later.',
     whatsapp: 'Or contact us via WhatsApp',
     whatsappBtn: 'Send WhatsApp',
+    contactMethods: 'Contact Methods',
+    emailContact: 'contact@bluescreativeagency.com',
+    phoneContact: '+57 313 762 1044',
+    responseTime: 'Response in 24 hours',
   },
 };
 
@@ -79,176 +87,367 @@ export default function ContactSection() {
     },
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const validateForm = () => {
     const errors: Record<string, string> = {};
 
-    if (!formData.name.trim()) {
-      errors.name = language === 'es' ? 'El nombre es requerido' : 'Name is required';
-    }
+    if (!formData.name.trim()) errors.name = 'Name is required';
     if (!formData.email.trim()) {
-      errors.email = language === 'es' ? 'El correo es requerido' : 'Email is required';
+      errors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      errors.email = language === 'es' ? 'Correo inválido' : 'Invalid email';
+      errors.email = 'Invalid email format';
     }
-    if (!formData.subject.trim()) {
-      errors.subject = language === 'es' ? 'El asunto es requerido' : 'Subject is required';
-    }
-    if (!formData.message.trim()) {
-      errors.message = language === 'es' ? 'El mensaje es requerido' : 'Message is required';
-    }
+    if (!formData.subject.trim()) errors.subject = 'Subject is required';
+    if (!formData.message.trim()) errors.message = 'Message is required';
 
-    if (Object.keys(errors).length > 0) {
-      setFieldErrors(errors);
-      setStatus('error');
-      setStatusMessage(language === 'es' ? 'Por favor completa todos los campos correctamente' : 'Please fill all fields correctly');
-      setTimeout(() => setStatus('idle'), 3000);
-      return;
-    }
+    setFieldErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
 
-    setFieldErrors({});
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!validateForm()) return;
+
     setStatus('loading');
-    sendContactMutation.mutate({
-      ...formData,
-      language,
+    await sendContactMutation.mutateAsync({
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
     });
   };
 
-  const whatsappMessage = `Hola Blue's Creative Agency, me gustaría conocer más sobre sus servicios.`;
-  const whatsappLink = `https://wa.me/573137621044?text=${encodeURIComponent(whatsappMessage)}`;
-
   return (
-    <section id="contact" className="py-20 md:py-32 bg-gradient-to-b from-background to-card/50">
-      <div className="container">
+    <section
+      id="contact"
+      className="relative py-20 overflow-hidden"
+      style={{
+        background: 'linear-gradient(135deg, #0a0e27 0%, #0d1a3a 50%, #0a0e27 100%)',
+      }}
+    >
+      {/* Decorative background elements */}
+      <div
+        className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10 blur-3xl"
+        style={{
+          background: '#00B1E3',
+        }}
+      />
+      <div
+        className="absolute bottom-0 left-0 w-96 h-96 rounded-full opacity-10 blur-3xl"
+        style={{
+          background: '#00B1E3',
+        }}
+      />
+
+      <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="font-title text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">{t.title}</span>
+        <div className="text-center mb-16 animate-fade-in-up">
+          <h2
+            className="text-4xl md:text-5xl font-black mb-4"
+            style={{
+              color: '#ffffff',
+              textShadow: '0 0 20px rgba(0, 177, 227, 0.6)',
+            }}
+          >
+            {t.title}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t.subtitle}</p>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            {t.subtitle}
+          </p>
         </div>
 
-        {/* Contact Form */}
-        <div className="max-w-2xl mx-auto">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Name & Email Row */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">{t.name}</label>
-                <Input
-                  type="text"
-                  name="name"
-                  placeholder={t.namePlaceholder}
-                  value={formData.name}
-                  onChange={handleChange}
-                  disabled={status === 'loading'}
-                  className={`bg-card focus:border-primary-blue ${fieldErrors.name ? 'border-red-500' : 'border-border'}`}
-                />
-                {fieldErrors.name && <p className="text-xs text-red-500 mt-1">{fieldErrors.name}</p>}
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">{t.email}</label>
-                <Input
-                  type="email"
-                  name="email"
-                  placeholder={t.emailPlaceholder}
-                  value={formData.email}
-                  onChange={handleChange}
-                  disabled={status === 'loading'}
-                  className={`bg-card focus:border-primary-blue ${fieldErrors.email ? 'border-red-500' : 'border-border'}`}
-                />
-                {fieldErrors.email && <p className="text-xs text-red-500 mt-1">{fieldErrors.email}</p>}
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          {/* Contact Methods */}
+          <div className="lg:col-span-1 space-y-6">
+            <div className="text-center lg:text-left mb-8">
+              <h3
+                className="text-2xl font-bold mb-2"
+                style={{ color: '#00B1E3', textShadow: '0 0 10px rgba(0, 177, 227, 0.4)' }}
+              >
+                {t.contactMethods}
+              </h3>
             </div>
 
-            {/* Subject */}
-            <div>
-              <label className="block text-sm font-medium text-foreground mb-2">{t.subject}</label>
-              <Input
-                type="text"
-                name="subject"
-                placeholder={t.subjectPlaceholder}
-                value={formData.subject}
-                onChange={handleChange}
-                disabled={status === 'loading'}
-                className="bg-card border-border focus:border-primary-blue"
-              />
-            </div>
-
-            {/* Message */}
-            <div>
-              <label className="block text-sm font-medium text-foreground mb-2">{t.message}</label>
-              <Textarea
-                name="message"
-                placeholder={t.messagePlaceholder}
-                value={formData.message}
-                onChange={handleChange}
-                disabled={status === 'loading'}
-                rows={5}
-                className="bg-card border-border focus:border-primary-blue resize-none"
-              />
-            </div>
-
-            {/* Status Messages */}
-            {status === 'success' && (
-              <div className="flex items-center gap-3 p-4 rounded-lg bg-green-500/10 border border-green-500/30">
-                <CheckCircle className="w-5 h-5 text-green-500" />
-                <div>
-                  <p className="font-medium text-green-500">{t.success}</p>
-                  <p className="text-sm text-green-500/80">{statusMessage}</p>
-                </div>
-              </div>
-            )}
-
-            {status === 'error' && (
-              <div className="flex items-center gap-3 p-4 rounded-lg bg-red-500/10 border border-red-500/30">
-                <AlertCircle className="w-5 h-5 text-red-500" />
-                <div>
-                  <p className="font-medium text-red-500">{t.error}</p>
-                  <p className="text-sm text-red-500/80">{statusMessage}</p>
-                </div>
-              </div>
-            )}
-
-            {/* Submit Button */}
-            <Button
-              type="submit"
-              disabled={status === 'loading'}
-              className="w-full bg-primary-blue hover:bg-primary-blue/90 text-background font-semibold py-6 rounded-lg glow-blue-lg transition-smooth"
-            >
-              {status === 'loading' ? (
-                <>
-                  <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                  {t.sending}
-                </>
-              ) : (
-                <>
-                  <Send className="mr-2 h-5 w-5" />
-                  {t.send}
-                </>
-              )}
-            </Button>
-          </form>
-
-          {/* WhatsApp Alternative */}
-          <div className="mt-12 pt-8 border-t border-border text-center">
-            <p className="text-muted-foreground mb-4">{t.whatsapp}</p>
+            {/* Email Card */}
             <a
-              href={whatsappLink}
+              href={`mailto:${t.emailContact}`}
+              className="p-6 rounded-xl transition-all duration-300 hover:scale-105 group"
+              style={{
+                backgroundColor: 'rgba(0, 177, 227, 0.1)',
+                border: '2px solid #00B1E3',
+                boxShadow: '0 0 20px rgba(0, 177, 227, 0.2)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = '0 0 40px rgba(0, 177, 227, 0.5)';
+                e.currentTarget.style.backgroundColor = 'rgba(0, 177, 227, 0.15)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.2)';
+                e.currentTarget.style.backgroundColor = 'rgba(0, 177, 227, 0.1)';
+              }}
+            >
+              <div className="flex items-center gap-4 mb-3">
+                <Mail size={24} style={{ color: '#00B1E3' }} />
+                <span className="text-white font-bold">Email</span>
+              </div>
+              <p className="text-gray-300 text-sm break-all">{t.emailContact}</p>
+            </a>
+
+            {/* Phone Card */}
+            <a
+              href={`tel:+573137621044`}
+              className="p-6 rounded-xl transition-all duration-300 hover:scale-105 group"
+              style={{
+                backgroundColor: 'rgba(0, 177, 227, 0.1)',
+                border: '2px solid #00B1E3',
+                boxShadow: '0 0 20px rgba(0, 177, 227, 0.2)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = '0 0 40px rgba(0, 177, 227, 0.5)';
+                e.currentTarget.style.backgroundColor = 'rgba(0, 177, 227, 0.15)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.2)';
+                e.currentTarget.style.backgroundColor = 'rgba(0, 177, 227, 0.1)';
+              }}
+            >
+              <div className="flex items-center gap-4 mb-3">
+                <Phone size={24} style={{ color: '#00B1E3' }} />
+                <span className="text-white font-bold">Teléfono</span>
+              </div>
+              <p className="text-gray-300 text-sm">{t.phoneContact}</p>
+            </a>
+
+            {/* WhatsApp Card */}
+            <a
+              href="https://wa.me/573137621044"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-green-500/10 hover:bg-green-500/20 border border-green-500/30 text-green-500 font-medium transition-smooth"
+              className="p-6 rounded-xl transition-all duration-300 hover:scale-105 group"
+              style={{
+                backgroundColor: 'rgba(0, 177, 227, 0.1)',
+                border: '2px solid #00B1E3',
+                boxShadow: '0 0 20px rgba(0, 177, 227, 0.2)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = '0 0 40px rgba(0, 177, 227, 0.5)';
+                e.currentTarget.style.backgroundColor = 'rgba(0, 177, 227, 0.15)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.2)';
+                e.currentTarget.style.backgroundColor = 'rgba(0, 177, 227, 0.1)';
+              }}
             >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.782 1.14l-.46.264-4.759-.963 1.6 4.592.277.447A9.86 9.86 0 005.364 19.487c2.33 2.33 5.434 3.614 8.716 3.614 2.524 0 4.928-.742 7.076-2.145l.430-.255 4.588.942-1.595-4.592-.422-.672A9.86 9.86 0 0012.651 2.979z" />
-              </svg>
-              {t.whatsappBtn}
+              <div className="flex items-center gap-4 mb-3">
+                <MessageCircle size={24} style={{ color: '#00B1E3' }} />
+                <span className="text-white font-bold">WhatsApp</span>
+              </div>
+              <p className="text-gray-300 text-sm">{t.phoneContact}</p>
             </a>
+
+            {/* Response Time */}
+            <div
+              className="p-4 rounded-xl text-center"
+              style={{
+                backgroundColor: 'rgba(0, 177, 227, 0.05)',
+                border: '1px solid rgba(0, 177, 227, 0.3)',
+              }}
+            >
+              <p className="text-gray-400 text-sm">⏱️ {t.responseTime}</p>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="lg:col-span-2">
+            <form
+              onSubmit={handleSubmit}
+              className="p-8 rounded-2xl"
+              style={{
+                backgroundColor: 'rgba(0, 177, 227, 0.05)',
+                border: '2px solid #00B1E3',
+                boxShadow: '0 0 30px rgba(0, 177, 227, 0.15)',
+              }}
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                {/* Name Field */}
+                <div>
+                  <label className="block text-white font-bold mb-2 text-sm">
+                    {t.name}
+                  </label>
+                  <Input
+                    type="text"
+                    placeholder={t.namePlaceholder}
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="w-full px-4 py-3 rounded-lg transition-all duration-300"
+                    style={{
+                      backgroundColor: 'rgba(10, 14, 39, 0.8)',
+                      border: fieldErrors.name ? '2px solid #ff4444' : '2px solid #00B1E3',
+                      color: '#ffffff',
+                    }}
+                    onFocus={(e) => {
+                      e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.4)';
+                    }}
+                    onBlur={(e) => {
+                      e.currentTarget.style.boxShadow = 'none';
+                    }}
+                  />
+                  {fieldErrors.name && (
+                    <p className="text-red-400 text-xs mt-1">{fieldErrors.name}</p>
+                  )}
+                </div>
+
+                {/* Email Field */}
+                <div>
+                  <label className="block text-white font-bold mb-2 text-sm">
+                    {t.email}
+                  </label>
+                  <Input
+                    type="email"
+                    placeholder={t.emailPlaceholder}
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full px-4 py-3 rounded-lg transition-all duration-300"
+                    style={{
+                      backgroundColor: 'rgba(10, 14, 39, 0.8)',
+                      border: fieldErrors.email ? '2px solid #ff4444' : '2px solid #00B1E3',
+                      color: '#ffffff',
+                    }}
+                    onFocus={(e) => {
+                      e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.4)';
+                    }}
+                    onBlur={(e) => {
+                      e.currentTarget.style.boxShadow = 'none';
+                    }}
+                  />
+                  {fieldErrors.email && (
+                    <p className="text-red-400 text-xs mt-1">{fieldErrors.email}</p>
+                  )}
+                </div>
+              </div>
+
+              {/* Subject Field */}
+              <div className="mb-6">
+                <label className="block text-white font-bold mb-2 text-sm">
+                  {t.subject}
+                </label>
+                <Input
+                  type="text"
+                  placeholder={t.subjectPlaceholder}
+                  value={formData.subject}
+                  onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                  className="w-full px-4 py-3 rounded-lg transition-all duration-300"
+                  style={{
+                    backgroundColor: 'rgba(10, 14, 39, 0.8)',
+                    border: fieldErrors.subject ? '2px solid #ff4444' : '2px solid #00B1E3',
+                    color: '#ffffff',
+                  }}
+                  onFocus={(e) => {
+                    e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.4)';
+                  }}
+                  onBlur={(e) => {
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
+                />
+                {fieldErrors.subject && (
+                  <p className="text-red-400 text-xs mt-1">{fieldErrors.subject}</p>
+                )}
+              </div>
+
+              {/* Message Field */}
+              <div className="mb-6">
+                <label className="block text-white font-bold mb-2 text-sm">
+                  {t.message}
+                </label>
+                <Textarea
+                  placeholder={t.messagePlaceholder}
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  rows={5}
+                  className="w-full px-4 py-3 rounded-lg transition-all duration-300 resize-none"
+                  style={{
+                    backgroundColor: 'rgba(10, 14, 39, 0.8)',
+                    border: fieldErrors.message ? '2px solid #ff4444' : '2px solid #00B1E3',
+                    color: '#ffffff',
+                  }}
+                  onFocus={(e) => {
+                    e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.4)';
+                  }}
+                  onBlur={(e) => {
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
+                />
+                {fieldErrors.message && (
+                  <p className="text-red-400 text-xs mt-1">{fieldErrors.message}</p>
+                )}
+              </div>
+
+              {/* Status Messages */}
+              {status === 'success' && (
+                <div
+                  className="p-4 rounded-lg mb-6 flex items-center gap-3"
+                  style={{
+                    backgroundColor: 'rgba(34, 197, 94, 0.1)',
+                    border: '2px solid #22c55e',
+                  }}
+                >
+                  <CheckCircle size={20} style={{ color: '#22c55e' }} />
+                  <div>
+                    <p className="text-green-400 font-bold text-sm">{t.success}</p>
+                    <p className="text-green-300 text-xs">{statusMessage}</p>
+                  </div>
+                </div>
+              )}
+
+              {status === 'error' && (
+                <div
+                  className="p-4 rounded-lg mb-6 flex items-center gap-3"
+                  style={{
+                    backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                    border: '2px solid #ef4444',
+                  }}
+                >
+                  <AlertCircle size={20} style={{ color: '#ef4444' }} />
+                  <div>
+                    <p className="text-red-400 font-bold text-sm">{t.error}</p>
+                    <p className="text-red-300 text-xs">{statusMessage}</p>
+                  </div>
+                </div>
+              )}
+
+              {/* Submit Button */}
+              <Button
+                type="submit"
+                disabled={status === 'loading'}
+                className="w-full py-3 rounded-lg font-bold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+                style={{
+                  backgroundColor: '#00B1E3',
+                  color: '#000000',
+                  border: '2px solid #00B1E3',
+                  boxShadow: '0 0 20px rgba(0, 177, 227, 0.6)',
+                }}
+                onMouseEnter={(e) => {
+                  if (!status.includes('loading')) {
+                    e.currentTarget.style.boxShadow = '0 0 40px rgba(0, 177, 227, 0.8)';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.6)';
+                }}
+              >
+                {status === 'loading' ? (
+                  <>
+                    <Loader2 size={20} className="animate-spin" />
+                    {t.sending}
+                  </>
+                ) : (
+                  <>
+                    <Send size={20} />
+                    {t.send}
+                  </>
+                )}
+              </Button>
+            </form>
           </div>
         </div>
       </div>
