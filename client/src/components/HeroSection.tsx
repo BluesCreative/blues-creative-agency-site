@@ -132,12 +132,12 @@ export default function HeroSection() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce z-20 md:absolute md:bottom-8">
+        <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 z-20 md:absolute md:bottom-8">
           <span className="text-xs md:text-sm px-3 py-1 rounded-full" style={{ color: '#00B1E3', textShadow: '0 0 10px rgba(0, 177, 227, 0.6)', backgroundColor: 'rgba(0, 177, 227, 0.1)', border: '1px solid rgba(0, 177, 227, 0.3)' }}>
             {t.scrollText}
           </span>
           <svg
-            className="w-5 h-5 md:w-6 md:h-6 animate-bounce"
+            className="w-5 h-5 md:w-6 md:h-6"
             style={{ color: '#00B1E3', filter: 'drop-shadow(0 0 10px rgba(0, 177, 227, 0.6))' }}
             fill="none"
             stroke="currentColor"
