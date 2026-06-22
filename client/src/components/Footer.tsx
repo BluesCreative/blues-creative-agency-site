@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Linkedin, Facebook, Twitter, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const translations = {
@@ -16,6 +16,12 @@ const translations = {
     location: 'Colombia',
     followUs: 'Síguenos',
     copyright: '© 2026 Blue\'s Creative Agency. Todos los derechos reservados.',
+    services_title: 'Servicios',
+    branding: 'Branding',
+    webDesign: 'Diseño Web',
+    development: 'Desarrollo Digital',
+    content: 'Contenido Digital',
+    aiSolutions: 'Soluciones IA',
   },
   en: {
     company: 'Blue\'s Creative Agency',
@@ -31,6 +37,12 @@ const translations = {
     location: 'Colombia',
     followUs: 'Follow Us',
     copyright: '© 2026 Blue\'s Creative Agency. All rights reserved.',
+    services_title: 'Services',
+    branding: 'Branding',
+    webDesign: 'Web Design',
+    development: 'Digital Development',
+    content: 'Digital Content',
+    aiSolutions: 'AI Solutions',
   },
 };
 
@@ -46,33 +58,172 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-card border-t border-border">
-      <div className="container py-16">
+    <footer
+      className="relative pt-20 pb-8"
+      style={{
+        background: 'linear-gradient(135deg, #0a0e27 0%, #0d1a3a 50%, #0a0e27 100%)',
+        borderTop: '2px solid #00B1E3',
+        boxShadow: '0 -10px 40px rgba(0, 177, 227, 0.1)',
+      }}
+    >
+      {/* Decorative top line */}
+      <div
+        className="absolute top-0 left-0 right-0 h-1"
+        style={{
+          background: 'linear-gradient(90deg, transparent, #00B1E3, transparent)',
+        }}
+      />
+
+      <div className="container mx-auto px-4">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
-          <div>
-            <h3 className="font-logo text-lg font-semibold text-white mb-4">{t.company}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{t.description}</p>
+          <div className="space-y-4">
+            <div className="mb-6">
+              <img
+                src="/manus-storage/blues-logo-outline_16e6773d.png"
+                alt="Blue's Creative Agency"
+                className="h-12 w-auto"
+                style={{
+                  filter: 'drop-shadow(0 0 10px rgba(0, 177, 227, 0.4))',
+                }}
+              />
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              {t.description}
+            </p>
+            {/* Social Media Icons */}
+            <div className="flex gap-4 pt-4">
+              <a
+                href="https://instagram.com/bluescreativeagency"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full transition-all duration-300 hover:scale-110"
+                style={{
+                  backgroundColor: 'rgba(0, 177, 227, 0.1)',
+                  border: '2px solid #00B1E3',
+                  color: '#00B1E3',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#00B1E3';
+                  e.currentTarget.style.color = '#000000';
+                  e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.6)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(0, 177, 227, 0.1)';
+                  e.currentTarget.style.color = '#00B1E3';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <Instagram size={18} />
+              </a>
+              <a
+                href="https://linkedin.com/company/bluescreativeagency"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full transition-all duration-300 hover:scale-110"
+                style={{
+                  backgroundColor: 'rgba(0, 177, 227, 0.1)',
+                  border: '2px solid #00B1E3',
+                  color: '#00B1E3',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#00B1E3';
+                  e.currentTarget.style.color = '#000000';
+                  e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.6)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(0, 177, 227, 0.1)';
+                  e.currentTarget.style.color = '#00B1E3';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <Linkedin size={18} />
+              </a>
+              <a
+                href="https://facebook.com/bluescreativeagency"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full transition-all duration-300 hover:scale-110"
+                style={{
+                  backgroundColor: 'rgba(0, 177, 227, 0.1)',
+                  border: '2px solid #00B1E3',
+                  color: '#00B1E3',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#00B1E3';
+                  e.currentTarget.style.color = '#000000';
+                  e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.6)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(0, 177, 227, 0.1)';
+                  e.currentTarget.style.color = '#00B1E3';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <Facebook size={18} />
+              </a>
+              <a
+                href="https://twitter.com/bluescreativeagency"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full transition-all duration-300 hover:scale-110"
+                style={{
+                  backgroundColor: 'rgba(0, 177, 227, 0.1)',
+                  border: '2px solid #00B1E3',
+                  color: '#00B1E3',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#00B1E3';
+                  e.currentTarget.style.color = '#000000';
+                  e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.6)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(0, 177, 227, 0.1)';
+                  e.currentTarget.style.color = '#00B1E3';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <Twitter size={18} />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-title font-bold text-foreground mb-4">{t.quickLinks}</h4>
+            <h3 className="text-white font-bold text-lg mb-6" style={{ textShadow: '0 0 10px rgba(0, 177, 227, 0.4)' }}>
+              {t.quickLinks}
+            </h3>
             <ul className="space-y-3">
               {[
                 { label: t.services, id: 'services' },
                 { label: t.portfolio, id: 'portfolio' },
                 { label: t.about, id: 'about' },
                 { label: t.contact, id: 'contact' },
-              ].map((link) => (
-                <li key={link.id}>
+              ].map((item) => (
+                <li key={item.id}>
                   <button
-                    onClick={() => scrollToSection(link.id)}
-                    className="text-sm text-muted-foreground hover:text-primary-blue transition-smooth"
+                    onClick={() => scrollToSection(item.id)}
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
-                    {link.label}
+                    {item.label}
                   </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-white font-bold text-lg mb-6" style={{ textShadow: '0 0 10px rgba(0, 177, 227, 0.4)' }}>
+              {t.services_title}
+            </h3>
+            <ul className="space-y-3">
+              {[t.branding, t.webDesign, t.development, t.content, t.aiSolutions].map((service) => (
+                <li key={service}>
+                  <span className="text-gray-400 text-sm hover:text-cyan-400 transition-colors duration-300 cursor-pointer">
+                    {service}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -80,67 +231,109 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-title font-bold text-foreground mb-4">{t.contactInfo}</h4>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Mail size={16} className="text-primary-blue" />
-                <a href={`mailto:${t.email}`} className="hover:text-primary-blue transition-smooth">
-                  {t.email}
-                </a>
-              </li>
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Phone size={16} className="text-primary-blue" />
-                <a href={`tel:${t.phone}`} className="hover:text-primary-blue transition-smooth">
-                  {t.phone}
-                </a>
-              </li>
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <MapPin size={16} className="text-primary-blue" />
-                <span>{t.location}</span>
-              </li>
-            </ul>
-          </div>
+            <h3 className="text-white font-bold text-lg mb-6" style={{ textShadow: '0 0 10px rgba(0, 177, 227, 0.4)' }}>
+              {t.contactInfo}
+            </h3>
+            <div className="space-y-4">
+              {/* Email */}
+              <a
+                href={`mailto:${t.email}`}
+                className="flex items-center gap-3 text-gray-400 hover:text-cyan-400 transition-colors duration-300 group"
+              >
+                <Mail
+                  size={20}
+                  style={{
+                    color: '#00B1E3',
+                    filter: 'drop-shadow(0 0 5px rgba(0, 177, 227, 0.4))',
+                  }}
+                />
+                <span className="text-sm break-all">{t.email}</span>
+              </a>
 
-          {/* Social Links */}
-          <div>
-            <h4 className="font-title font-bold text-foreground mb-4">{t.followUs}</h4>
-            <div className="flex gap-4">
+              {/* Phone */}
               <a
-                href="https://instagram.com/bluescreativeagency"
+                href={`tel:${t.phone.replace(/\s/g, '')}`}
+                className="flex items-center gap-3 text-gray-400 hover:text-cyan-400 transition-colors duration-300 group"
+              >
+                <Phone
+                  size={20}
+                  style={{
+                    color: '#00B1E3',
+                    filter: 'drop-shadow(0 0 5px rgba(0, 177, 227, 0.4))',
+                  }}
+                />
+                <span className="text-sm">{t.phone}</span>
+              </a>
+
+              {/* WhatsApp */}
+              <a
+                href="https://wa.me/573137621044"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-lg bg-primary-blue/10 hover:bg-primary-blue/20 text-primary-blue transition-smooth"
-                aria-label="Instagram"
+                className="flex items-center gap-3 text-gray-400 hover:text-cyan-400 transition-colors duration-300 group"
               >
-                <Instagram size={20} />
+                <MessageCircle
+                  size={20}
+                  style={{
+                    color: '#00B1E3',
+                    filter: 'drop-shadow(0 0 5px rgba(0, 177, 227, 0.4))',
+                  }}
+                />
+                <span className="text-sm">WhatsApp: +57 313 762 1044</span>
               </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-lg bg-primary-blue/10 hover:bg-primary-blue/20 text-primary-blue transition-smooth"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-lg bg-primary-blue/10 hover:bg-primary-blue/20 text-primary-blue transition-smooth"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
-              </a>
+
+              {/* Location */}
+              <div className="flex items-center gap-3 text-gray-400">
+                <MapPin
+                  size={20}
+                  style={{
+                    color: '#00B1E3',
+                    filter: 'drop-shadow(0 0 5px rgba(0, 177, 227, 0.4))',
+                  }}
+                />
+                <span className="text-sm">{t.location}</span>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Divider */}
-        <div className="border-t border-border mb-8"></div>
+        <div
+          className="h-px my-8"
+          style={{
+            background: 'linear-gradient(90deg, transparent, #00B1E3, transparent)',
+          }}
+        />
 
-        {/* Copyright */}
-        <div className="text-center text-sm text-muted-foreground">{t.copyright}</div>
+        {/* Bottom Section */}
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          {/* Copyright */}
+          <p className="text-gray-500 text-sm text-center md:text-left">
+            {t.copyright}
+          </p>
+
+          {/* CTA Button */}
+          <a
+            href="https://wa.me/573137621044"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 md:mt-0 px-6 py-2 rounded-full font-bold text-sm transition-all duration-300 hover:scale-105"
+            style={{
+              backgroundColor: '#00B1E3',
+              color: '#000000',
+              border: '2px solid #00B1E3',
+              boxShadow: '0 0 15px rgba(0, 177, 227, 0.5)',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = '0 0 30px rgba(0, 177, 227, 0.8)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = '0 0 15px rgba(0, 177, 227, 0.5)';
+            }}
+          >
+            💬 {language === 'es' ? 'Hablemos por WhatsApp' : 'Chat on WhatsApp'}
+          </a>
+        </div>
       </div>
     </footer>
   );
