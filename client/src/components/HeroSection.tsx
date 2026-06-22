@@ -23,16 +23,6 @@ const translations = {
 export default function HeroSection() {
   const { language } = useLanguage();
   const t = translations[language];
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -47,9 +37,21 @@ export default function HeroSection() {
       <NeonBackground />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 flex flex-col items-center justify-center text-center">
+      <div className="relative z-10 container mx-auto px-4 flex flex-col items-center justify-center text-center min-h-[calc(100vh-80px)]">
+        {/* Logo Section */}
+        <div className="mb-8 animate-fade-in-up">
+          <img
+            src="/manus-storage/blues-logo_860f58fe.png"
+            alt="Blue's Creative Agency"
+            className="h-24 w-auto mx-auto transition-all duration-300 hover:scale-110"
+            style={{
+              filter: 'drop-shadow(0 0 20px rgba(0, 177, 227, 0.5))',
+            }}
+          />
+        </div>
+
         {/* Tagline with brand color */}
-        <div className="mb-6 inline-block">
+        <div className="mb-6 inline-block animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
           <div
             className="px-6 py-2 rounded-full border-2 animate-pulse"
             style={{
@@ -66,8 +68,9 @@ export default function HeroSection() {
 
         {/* Main Headline */}
         <h1
-          className="text-5xl md:text-7xl font-black mb-6 leading-tight max-w-4xl"
+          className="text-5xl md:text-7xl font-black mb-6 leading-tight max-w-4xl animate-fade-in-up"
           style={{
+            animationDelay: '0.2s',
             color: '#ffffff',
             textShadow: `
               0 0 20px rgba(0, 177, 227, 0.6),
@@ -81,12 +84,12 @@ export default function HeroSection() {
         </h1>
 
         {/* Description */}
-        <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed">
+        <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
           {t.description}
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex gap-4 mb-12 flex-wrap justify-center">
+        <div className="flex gap-4 mb-12 flex-wrap justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
           <Button
             size="lg"
             onClick={() => scrollToSection('contact')}

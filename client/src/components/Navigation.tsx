@@ -44,15 +44,14 @@ export default function Navigation() {
     >
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
-        <div
-          className="font-black text-xl font-semibold"
+        <img
+          src="/manus-storage/blues-logo_860f58fe.png"
+          alt="Blue's Creative Agency"
+          className="h-12 w-auto transition-all duration-300 hover:scale-105"
           style={{
-            color: '#ffffff',
-            textShadow: '0 0 15px rgba(0, 177, 227, 0.6), 0 0 30px rgba(0, 177, 227, 0.3)',
+            filter: 'drop-shadow(0 0 10px rgba(0, 177, 227, 0.4))',
           }}
-        >
-          Blue's Creative Agency
-        </div>
+        />
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
