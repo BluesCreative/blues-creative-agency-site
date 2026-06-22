@@ -113,9 +113,9 @@ export default function ServicesSection() {
         />
       </div>
 
-      <div className="container relative z-10">
+      <div className="container relative z-10 px-4">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <div
             className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 mb-6 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
             style={{
@@ -131,7 +131,7 @@ export default function ServicesSection() {
           </div>
 
           <h2
-            className={`font-black text-4xl md:text-5xl font-bold mb-4 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
+            className={`font-black text-2xl md:text-5xl font-bold mb-4 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
             style={{
               animationDelay: '0.1s',
               color: '#ffffff',
@@ -140,7 +140,7 @@ export default function ServicesSection() {
           >
             {t.title}
           </h2>
-          <p className={`text-lg text-gray-300 max-w-2xl mx-auto ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
+          <p className={`text-sm md:text-lg text-gray-300 max-w-2xl mx-auto ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
             {t.subtitle}
           </p>
 
@@ -153,7 +153,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
           {t.services.map((service, index) => {
             const Icon = service.icon;
             return (

@@ -134,18 +134,18 @@ export default function PortfolioSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background/80"></div>
       </div>
 
-      <div className="container relative z-10">
+      <div className="container relative z-10 px-4">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary-blue/30 bg-primary-blue/5 backdrop-blur-sm mb-6 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
             <div className="w-2 h-2 rounded-full bg-primary-blue animate-pulse"></div>
             <span className="text-xs font-semibold text-primary-blue">{language === 'es' ? 'Casos de Éxito' : 'Success Stories'}</span>
           </div>
 
-          <h2 className={`font-title text-4xl md:text-5xl font-bold mb-4 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
+          <h2 className={`font-title text-2xl md:text-5xl font-bold mb-4 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
             <span className="gradient-text">{t.title}</span>
           </h2>
-          <p className={`text-lg text-muted-foreground max-w-2xl mx-auto ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
+          <p className={`text-sm md:text-lg text-muted-foreground max-w-2xl mx-auto ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
             {t.subtitle}
           </p>
 
@@ -158,7 +158,7 @@ export default function PortfolioSection() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {t.projects.map((project, index) => (
             <div
               key={project.id}

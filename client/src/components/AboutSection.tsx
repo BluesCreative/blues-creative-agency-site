@@ -132,54 +132,54 @@ export default function AboutSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background/80"></div>
       </div>
 
-      <div className="container relative z-10">
+      <div className="container relative z-10 px-4">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary-blue/30 bg-primary-blue/5 backdrop-blur-sm mb-6 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
             <div className="w-2 h-2 rounded-full bg-primary-blue animate-pulse"></div>
             <span className="text-xs font-semibold text-primary-blue">{language === 'es' ? 'Quiénes Somos' : 'Who We Are'}</span>
           </div>
 
-          <h2 className={`font-title text-4xl md:text-5xl font-bold mb-4 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
+          <h2 className={`font-title text-2xl md:text-5xl font-bold mb-4 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
             <span className="gradient-text">{t.title}</span>
           </h2>
         </div>
 
         {/* Purpose, Mission, Vision */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-12 md:mb-20">
           {/* Purpose */}
-          <div className={`group relative p-8 rounded-xl bg-card/50 backdrop-blur-md border border-primary-blue/20 hover:border-primary-blue/60 transition-all duration-500 hover:bg-card/80 hover-lift overflow-hidden ${
+          <div className={`group relative p-6 md:p-8 rounded-xl bg-card/50 backdrop-blur-md border border-primary-blue/20 hover:border-primary-blue/60 transition-all duration-500 hover:bg-card/80 hover-lift overflow-hidden ${
             isVisible ? 'animate-fade-in-up' : 'opacity-0'
           }`} style={{ animationDelay: '0.2s' }}>
             <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="absolute inset-0 rounded-xl border border-primary-blue/0 group-hover:border-primary-blue/50 group-hover:shadow-[0_0_20px_rgba(0,177,227,0.3)] transition-all duration-500"></div>
             <div className="relative z-10">
-              <h3 className="font-title text-2xl font-bold mb-4 text-primary-blue group-hover:text-primary-blue/80 transition-colors">{t.purpose.title}</h3>
-              <p className="text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">{t.purpose.text}</p>
+              <h3 className="font-title text-lg md:text-2xl font-bold mb-4 text-primary-blue group-hover:text-primary-blue/80 transition-colors">{t.purpose.title}</h3>
+              <p className="text-xs md:text-base text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">{t.purpose.text}</p>
             </div>
           </div>
 
           {/* Mission */}
-          <div className={`group relative p-8 rounded-xl bg-card/50 backdrop-blur-md border border-primary-blue/20 hover:border-primary-blue/60 transition-all duration-500 hover:bg-card/80 hover-lift overflow-hidden ${
+          <div className={`group relative p-6 md:p-8 rounded-xl bg-card/50 backdrop-blur-md border border-primary-blue/20 hover:border-primary-blue/60 transition-all duration-500 hover:bg-card/80 hover-lift overflow-hidden ${
             isVisible ? 'animate-fade-in-up' : 'opacity-0'
           }`} style={{ animationDelay: '0.3s' }}>
             <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="absolute inset-0 rounded-xl border border-primary-blue/0 group-hover:border-primary-blue/50 group-hover:shadow-[0_0_20px_rgba(0,177,227,0.3)] transition-all duration-500"></div>
             <div className="relative z-10">
-              <h3 className="font-title text-2xl font-bold mb-4 text-primary-blue group-hover:text-primary-blue/80 transition-colors">{t.mission.title}</h3>
-              <p className="text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">{t.mission.text}</p>
+              <h3 className="font-title text-lg md:text-2xl font-bold mb-4 text-primary-blue group-hover:text-primary-blue/80 transition-colors">{t.mission.title}</h3>
+              <p className="text-xs md:text-base text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">{t.mission.text}</p>
             </div>
           </div>
 
           {/* Vision */}
-          <div className={`group relative p-8 rounded-xl bg-card/50 backdrop-blur-md border border-primary-blue/20 hover:border-primary-blue/60 transition-all duration-500 hover:bg-card/80 hover-lift overflow-hidden ${
+          <div className={`group relative p-6 md:p-8 rounded-xl bg-card/50 backdrop-blur-md border border-primary-blue/20 hover:border-primary-blue/60 transition-all duration-500 hover:bg-card/80 hover-lift overflow-hidden ${
             isVisible ? 'animate-fade-in-up' : 'opacity-0'
           }`} style={{ animationDelay: '0.4s' }}>
             <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="absolute inset-0 rounded-xl border border-primary-blue/0 group-hover:border-primary-blue/50 group-hover:shadow-[0_0_20px_rgba(0,177,227,0.3)] transition-all duration-500"></div>
             <div className="relative z-10">
-              <h3 className="font-title text-2xl font-bold mb-4 text-primary-blue group-hover:text-primary-blue/80 transition-colors">{t.vision.title}</h3>
-              <p className="text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">{t.vision.text}</p>
+              <h3 className="font-title text-lg md:text-2xl font-bold mb-4 text-primary-blue group-hover:text-primary-blue/80 transition-colors">{t.vision.title}</h3>
+              <p className="text-xs md:text-base text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">{t.vision.text}</p>
             </div>
           </div>
         </div>
@@ -193,10 +193,10 @@ export default function AboutSection() {
 
         {/* Values */}
         <div>
-          <h3 className={`font-title text-3xl font-bold mb-12 text-center ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.6s' }}>
+          <h3 className={`font-title text-xl md:text-3xl font-bold mb-8 md:mb-12 text-center ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.6s' }}>
             <span className="gradient-text">{language === 'es' ? 'Valores de Marca' : 'Brand Values'}</span>
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {t.values.map((value, index) => {
               const Icon = value.icon;
               return (

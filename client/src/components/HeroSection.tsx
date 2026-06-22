@@ -39,11 +39,11 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 flex flex-col items-center justify-center text-center min-h-[calc(100vh-80px)]">
         {/* Logo Section */}
-        <div className="mb-8 animate-fade-in-up">
+        <div className="mb-6 md:mb-8 animate-fade-in-up">
           <img
             src="/manus-storage/blues-logo-outline_16e6773d.png"
             alt="Blue's Creative Agency"
-            className="h-32 w-auto mx-auto transition-all duration-300 hover:scale-110"
+            className="h-24 md:h-32 w-auto mx-auto transition-all duration-300 hover:scale-110"
             style={{
               filter: 'drop-shadow(0 0 20px rgba(0, 177, 227, 0.5))',
             }}
@@ -51,16 +51,16 @@ export default function HeroSection() {
         </div>
 
         {/* Tagline with brand color */}
-        <div className="mb-6 inline-block animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+        <div className="mb-4 md:mb-6 inline-block animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
           <div
-            className="px-6 py-2 rounded-full border-2 animate-pulse"
+            className="px-4 md:px-6 py-2 rounded-full border-2 animate-pulse"
             style={{
               borderColor: '#00B1E3',
               backgroundColor: 'rgba(0, 177, 227, 0.1)',
               boxShadow: '0 0 20px rgba(0, 177, 227, 0.4), inset 0 0 20px rgba(0, 177, 227, 0.2)',
             }}
           >
-            <span className="text-sm font-bold" style={{ color: '#00B1E3', textShadow: '0 0 10px rgba(0, 177, 227, 0.6)' }}>
+            <span className="text-xs md:text-sm font-bold" style={{ color: '#00B1E3', textShadow: '0 0 10px rgba(0, 177, 227, 0.6)' }}>
               ✨ {t.tagline}
             </span>
           </div>
@@ -68,7 +68,7 @@ export default function HeroSection() {
 
         {/* Main Headline */}
         <h1
-          className="text-5xl md:text-7xl font-black mb-6 leading-tight max-w-4xl animate-fade-in-up"
+          className="text-3xl md:text-7xl font-black mb-4 md:mb-6 leading-tight max-w-4xl animate-fade-in-up"
           style={{
             animationDelay: '0.2s',
             color: '#ffffff',
@@ -84,12 +84,12 @@ export default function HeroSection() {
         </h1>
 
         {/* Description */}
-        <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+        <p className="text-sm md:text-xl text-gray-300 mb-6 md:mb-8 max-w-2xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
           {t.description}
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex gap-4 mb-12 flex-wrap justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+        <div className="flex gap-2 md:gap-4 mb-8 md:mb-12 flex-wrap justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
           <Button
             size="lg"
             onClick={() => scrollToSection('contact')}
