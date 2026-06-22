@@ -156,17 +156,15 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12">
           {/* Contact Methods */}
-          <div className="lg:col-span-1 space-y-6">
-            <div className="text-center lg:text-left mb-8">
-              <h3
-                className="text-2xl font-bold mb-2"
-                style={{ color: '#00B1E3', textShadow: '0 0 10px rgba(0, 177, 227, 0.4)' }}
-              >
-                {t.contactMethods}
-              </h3>
-            </div>
+          <div className="lg:col-span-1 space-y-6 flex flex-col justify-start">
+            <h3
+              className="text-2xl font-bold mb-8 text-center"
+              style={{ color: '#00B1E3', textShadow: '0 0 10px rgba(0, 177, 227, 0.4)' }}
+            >
+              {t.contactMethods}
+            </h3>
 
             {/* Email Card */}
             <a
@@ -258,7 +256,7 @@ export default function ContactSection() {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 flex flex-col justify-start">
             <form
               onSubmit={handleSubmit}
               className="p-8 rounded-2xl"
