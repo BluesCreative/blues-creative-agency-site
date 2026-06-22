@@ -38,8 +38,8 @@ export default function Navigation() {
       className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b"
       style={{
         backgroundColor: 'rgba(10, 14, 39, 0.95)',
-        borderColor: '#00ff00',
-        boxShadow: '0 0 20px rgba(0, 255, 0, 0.2)',
+        borderColor: '#00B1E3',
+        boxShadow: '0 0 20px rgba(0, 177, 227, 0.2)',
       }}
     >
       <div className="container flex items-center justify-between h-16">
@@ -48,7 +48,7 @@ export default function Navigation() {
           className="font-black text-xl font-semibold"
           style={{
             color: '#ffffff',
-            textShadow: '0 0 15px #00ff00, 0 0 30px #00ffff',
+            textShadow: '0 0 15px rgba(0, 177, 227, 0.6), 0 0 30px rgba(0, 177, 227, 0.3)',
           }}
         >
           Blue's Creative Agency
@@ -68,15 +68,15 @@ export default function Navigation() {
               className="text-sm font-medium transition-all duration-300 hover:scale-110"
               style={{
                 color: '#ffffff',
-                textShadow: '0 0 5px #00ffff',
+                textShadow: '0 0 5px rgba(0, 177, 227, 0.4)',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.color = '#00ff00';
-                e.currentTarget.style.textShadow = '0 0 10px #00ff00, 0 0 20px #00ff00';
+                e.currentTarget.style.color = '#00B1E3';
+                e.currentTarget.style.textShadow = '0 0 10px rgba(0, 177, 227, 0.8), 0 0 20px rgba(0, 177, 227, 0.6)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.color = '#ffffff';
-                e.currentTarget.style.textShadow = '0 0 5px #00ffff';
+                e.currentTarget.style.textShadow = '0 0 5px rgba(0, 177, 227, 0.4)';
               }}
             >
               {item.label}
@@ -90,9 +90,9 @@ export default function Navigation() {
           <div
             className="flex gap-2 rounded-lg p-1"
             style={{
-              border: '2px solid #00ff00',
-              backgroundColor: 'rgba(0, 255, 0, 0.1)',
-              boxShadow: '0 0 10px rgba(0, 255, 0, 0.3)',
+              border: '2px solid #00B1E3',
+              backgroundColor: 'rgba(0, 177, 227, 0.1)',
+              boxShadow: '0 0 10px rgba(0, 177, 227, 0.3)',
             }}
           >
             {['es', 'en'].map((lang) => (
@@ -101,9 +101,9 @@ export default function Navigation() {
                 onClick={() => setLanguage(lang as 'es' | 'en')}
                 className="px-3 py-1 text-xs font-bold rounded transition-all duration-300"
                 style={{
-                  backgroundColor: language === lang ? '#00ff00' : 'transparent',
-                  color: language === lang ? '#000000' : '#00ff00',
-                  textShadow: language === lang ? 'none' : '0 0 5px #00ff00',
+                  backgroundColor: language === lang ? '#00B1E3' : 'transparent',
+                  color: language === lang ? '#000000' : '#00B1E3',
+                  textShadow: language === lang ? 'none' : '0 0 5px rgba(0, 177, 227, 0.4)',
                 }}
               >
                 {lang.toUpperCase()}
@@ -116,16 +116,16 @@ export default function Navigation() {
             onClick={() => scrollToSection('contact')}
             className="font-bold px-6 py-2 rounded-full transition-all duration-300 hover:scale-110"
             style={{
-              backgroundColor: '#00ff00',
+              backgroundColor: '#00B1E3',
               color: '#000000',
-              border: '2px solid #00ff00',
-              boxShadow: '0 0 20px #00ff00',
+              border: '2px solid #00B1E3',
+              boxShadow: '0 0 20px rgba(0, 177, 227, 0.6)',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow = '0 0 40px #00ff00, 0 0 60px #00ffff';
+              e.currentTarget.style.boxShadow = '0 0 40px rgba(0, 177, 227, 0.8), 0 0 60px rgba(0, 177, 227, 0.5)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = '0 0 20px #00ff00';
+              e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.6)';
             }}
           >
             {t.contactBtn}
@@ -138,8 +138,8 @@ export default function Navigation() {
           <div
             className="flex gap-1 rounded p-1"
             style={{
-              border: '2px solid #00ff00',
-              backgroundColor: 'rgba(0, 255, 0, 0.1)',
+              border: '2px solid #00B1E3',
+              backgroundColor: 'rgba(0, 177, 227, 0.1)',
             }}
           >
             {['es', 'en'].map((lang) => (
@@ -148,8 +148,8 @@ export default function Navigation() {
                 onClick={() => setLanguage(lang as 'es' | 'en')}
                 className="px-2 py-1 text-xs font-bold rounded transition-all duration-300"
                 style={{
-                  backgroundColor: language === lang ? '#00ff00' : 'transparent',
-                  color: language === lang ? '#000000' : '#00ff00',
+                  backgroundColor: language === lang ? '#00B1E3' : 'transparent',
+                  color: language === lang ? '#000000' : '#00B1E3',
                 }}
               >
                 {lang.toUpperCase()}
@@ -161,8 +161,8 @@ export default function Navigation() {
             onClick={() => setIsOpen(!isOpen)}
             className="transition-all duration-300"
             style={{
-              color: '#00ff00',
-              filter: 'drop-shadow(0 0 5px #00ff00)',
+              color: '#00B1E3',
+              filter: 'drop-shadow(0 0 5px rgba(0, 177, 227, 0.6))',
             }}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -175,8 +175,8 @@ export default function Navigation() {
         <div
           style={{
             backgroundColor: 'rgba(10, 14, 39, 0.98)',
-            borderTop: '2px solid #00ff00',
-            boxShadow: '0 0 20px rgba(0, 255, 0, 0.2)',
+            borderTop: '2px solid #00B1E3',
+            boxShadow: '0 0 20px rgba(0, 177, 227, 0.2)',
           }}
         >
           <div className="container py-4 flex flex-col gap-4">
@@ -191,8 +191,8 @@ export default function Navigation() {
                 onClick={() => scrollToSection(item.id)}
                 className="text-left text-sm font-medium transition-all duration-300"
                 style={{
-                  color: '#00ff00',
-                  textShadow: '0 0 10px #00ff00',
+                  color: '#00B1E3',
+                  textShadow: '0 0 10px rgba(0, 177, 227, 0.5)',
                 }}
               >
                 {item.label}
@@ -202,10 +202,10 @@ export default function Navigation() {
               onClick={() => scrollToSection('contact')}
               className="w-full font-bold mt-2 rounded-full"
               style={{
-                backgroundColor: '#00ff00',
+                backgroundColor: '#00B1E3',
                 color: '#000000',
-                border: '2px solid #00ff00',
-                boxShadow: '0 0 20px #00ff00',
+                border: '2px solid #00B1E3',
+                boxShadow: '0 0 20px rgba(0, 177, 227, 0.6)',
               }}
             >
               {t.contactBtn}

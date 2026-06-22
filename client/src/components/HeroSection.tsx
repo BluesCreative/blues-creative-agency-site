@@ -48,16 +48,17 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 flex flex-col items-center justify-center text-center">
-        {/* Tagline with neon effect */}
+        {/* Tagline with brand color */}
         <div className="mb-6 inline-block">
           <div
-            className="px-6 py-2 rounded-full border-2 border-green-500 animate-pulse"
+            className="px-6 py-2 rounded-full border-2 animate-pulse"
             style={{
-              borderColor: '#00ff00',
-              boxShadow: '0 0 20px #00ff0066, inset 0 0 20px #00ff0033',
+              borderColor: '#00B1E3',
+              backgroundColor: 'rgba(0, 177, 227, 0.1)',
+              boxShadow: '0 0 20px rgba(0, 177, 227, 0.4), inset 0 0 20px rgba(0, 177, 227, 0.2)',
             }}
           >
-            <span className="text-sm font-bold" style={{ color: '#00ff00', textShadow: '0 0 10px #00ff00' }}>
+            <span className="text-sm font-bold" style={{ color: '#00B1E3', textShadow: '0 0 10px rgba(0, 177, 227, 0.6)' }}>
               ✨ {t.tagline}
             </span>
           </div>
@@ -69,10 +70,10 @@ export default function HeroSection() {
           style={{
             color: '#ffffff',
             textShadow: `
-              0 0 20px #00ff00,
-              0 0 40px #00ffff,
-              0 0 60px #00ff00,
-              2px 2px 4px rgba(0, 255, 0, 0.5)
+              0 0 20px rgba(0, 177, 227, 0.6),
+              0 0 40px rgba(0, 177, 227, 0.4),
+              0 0 60px rgba(0, 177, 227, 0.2),
+              2px 2px 4px rgba(0, 177, 227, 0.3)
             `,
           }}
         >
@@ -91,16 +92,16 @@ export default function HeroSection() {
             onClick={() => scrollToSection('contact')}
             className="px-8 py-6 text-lg font-bold rounded-full border-2 transition-all duration-300 hover:scale-105"
             style={{
-              backgroundColor: '#00ff00',
+              backgroundColor: '#00B1E3',
               color: '#000000',
-              borderColor: '#00ff00',
-              boxShadow: '0 0 20px #00ff00, inset 0 0 10px #00ff0066',
+              borderColor: '#00B1E3',
+              boxShadow: '0 0 20px rgba(0, 177, 227, 0.6), inset 0 0 10px rgba(0, 177, 227, 0.3)',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow = '0 0 40px #00ff00, inset 0 0 20px #00ff0099';
+              e.currentTarget.style.boxShadow = '0 0 40px rgba(0, 177, 227, 0.8), inset 0 0 20px rgba(0, 177, 227, 0.5)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = '0 0 20px #00ff00, inset 0 0 10px #00ff0066';
+              e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.6), inset 0 0 10px rgba(0, 177, 227, 0.3)';
             }}
           >
             {t.cta}
@@ -111,16 +112,16 @@ export default function HeroSection() {
             variant="outline"
             className="px-8 py-6 text-lg font-bold rounded-full border-2 transition-all duration-300 hover:scale-105"
             style={{
-              borderColor: '#00ffff',
-              color: '#00ffff',
+              borderColor: '#00B1E3',
+              color: '#00B1E3',
               backgroundColor: 'transparent',
-              boxShadow: '0 0 20px #00ffff66',
+              boxShadow: '0 0 20px rgba(0, 177, 227, 0.4)',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow = '0 0 40px #00ffff, inset 0 0 20px #00ffff66';
+              e.currentTarget.style.boxShadow = '0 0 40px rgba(0, 177, 227, 0.8), inset 0 0 20px rgba(0, 177, 227, 0.3)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = '0 0 20px #00ffff66';
+              e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.4)';
             }}
           >
             Hablemos
@@ -129,12 +130,12 @@ export default function HeroSection() {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-          <span className="text-sm" style={{ color: '#00ffff', textShadow: '0 0 10px #00ffff' }}>
+          <span className="text-sm" style={{ color: '#00B1E3', textShadow: '0 0 10px rgba(0, 177, 227, 0.6)' }}>
             {t.scrollText}
           </span>
           <svg
             className="w-6 h-6 animate-bounce"
-            style={{ color: '#00ff00', filter: 'drop-shadow(0 0 10px #00ff00)' }}
+            style={{ color: '#00B1E3', filter: 'drop-shadow(0 0 10px rgba(0, 177, 227, 0.6))' }}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

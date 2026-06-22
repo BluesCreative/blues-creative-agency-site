@@ -106,7 +106,7 @@ export default function ServicesSection() {
       <div className="absolute inset-0 opacity-5">
         <div
           style={{
-            backgroundImage: 'linear-gradient(0deg, transparent 24%, rgba(0, 255, 255, 0.05) 25%, rgba(0, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 255, 255, 0.05) 75%, rgba(0, 255, 255, 0.05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(0, 255, 255, 0.05) 25%, rgba(0, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 255, 255, 0.05) 75%, rgba(0, 255, 255, 0.05) 76%, transparent 77%, transparent)',
+            backgroundImage: 'linear-gradient(0deg, transparent 24%, rgba(0, 177, 227, 0.05) 25%, rgba(0, 177, 227, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 177, 227, 0.05) 75%, rgba(0, 177, 227, 0.05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(0, 177, 227, 0.05) 25%, rgba(0, 177, 227, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 177, 227, 0.05) 75%, rgba(0, 177, 227, 0.05) 76%, transparent 77%, transparent)',
             backgroundSize: '50px 50px',
           }}
           className="absolute inset-0"
@@ -119,13 +119,13 @@ export default function ServicesSection() {
           <div
             className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 mb-6 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
             style={{
-              borderColor: '#00ff00',
-              backgroundColor: 'rgba(0, 255, 0, 0.1)',
-              boxShadow: '0 0 15px rgba(0, 255, 0, 0.3)',
+              borderColor: '#00B1E3',
+              backgroundColor: 'rgba(0, 177, 227, 0.1)',
+              boxShadow: '0 0 15px rgba(0, 177, 227, 0.3)',
             }}
           >
-            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#00ff00', animation: 'pulse 2s infinite' }}></div>
-            <span className="text-xs font-semibold" style={{ color: '#00ff00', textShadow: '0 0 10px #00ff00' }}>
+            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#00B1E3', animation: 'pulse 2s infinite' }}></div>
+            <span className="text-xs font-semibold" style={{ color: '#00B1E3', textShadow: '0 0 10px rgba(0, 177, 227, 0.4)' }}>
               {language === 'es' ? 'Servicios Profesionales' : 'Professional Services'}
             </span>
           </div>
@@ -135,7 +135,7 @@ export default function ServicesSection() {
             style={{
               animationDelay: '0.1s',
               color: '#ffffff',
-              textShadow: '0 0 20px #00ff00, 0 0 40px #00ffff',
+              textShadow: '0 0 20px rgba(0, 177, 227, 0.5), 0 0 40px rgba(0, 177, 227, 0.3)',
             }}
           >
             {t.title}
@@ -146,9 +146,9 @@ export default function ServicesSection() {
 
           {/* Decorative line */}
           <div className={`flex items-center justify-center gap-4 mt-8 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
-            <div className="h-1 w-12 rounded-full" style={{ background: 'linear-gradient(to right, transparent, #00ff00)' }}></div>
-            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#00ff00', boxShadow: '0 0 10px #00ff00' }}></div>
-            <div className="h-1 w-12 rounded-full" style={{ background: 'linear-gradient(to left, transparent, #00ff00)' }}></div>
+            <div className="h-1 w-12 rounded-full" style={{ background: 'linear-gradient(to right, transparent, #00B1E3)' }}></div>
+            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#00B1E3', boxShadow: '0 0 10px rgba(0, 177, 227, 0.6)' }}></div>
+            <div className="h-1 w-12 rounded-full" style={{ background: 'linear-gradient(to left, transparent, #00B1E3)' }}></div>
           </div>
         </div>
 
@@ -164,17 +164,17 @@ export default function ServicesSection() {
                 }`}
                 style={{
                   animationDelay: isVisible ? `${0.4 + index * 0.1}s` : '0s',
-                  backgroundColor: '#1a1f3a',
-                  border: '2px solid #00ff00',
-                  boxShadow: '0 0 20px rgba(0, 255, 0, 0.3)',
+                  backgroundColor: '#0A1525',
+                  border: '2px solid #00B1E3',
+                  boxShadow: '0 0 20px rgba(0, 177, 227, 0.3)',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = '0 0 40px #00ff00, 0 0 60px #00ffff, inset 0 0 20px rgba(0, 255, 0, 0.2)';
-                  e.currentTarget.style.borderColor = '#00ffff';
+                  e.currentTarget.style.boxShadow = '0 0 40px rgba(0, 177, 227, 0.6), 0 0 60px rgba(0, 177, 227, 0.4), inset 0 0 20px rgba(0, 177, 227, 0.2)';
+                  e.currentTarget.style.borderColor = '#00B1E3';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 255, 0, 0.3)';
-                  e.currentTarget.style.borderColor = '#00ff00';
+                  e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.3)';
+                  e.currentTarget.style.borderColor = '#00B1E3';
                 }}
               >
                 {/* Content */}
@@ -183,15 +183,15 @@ export default function ServicesSection() {
                   <div
                     className="inline-flex p-3 rounded-lg transition-all duration-500 transform group-hover:scale-110 group-hover:rotate-6"
                     style={{
-                      backgroundColor: 'rgba(0, 255, 0, 0.2)',
-                      boxShadow: '0 0 15px rgba(0, 255, 0, 0.3)',
+                      backgroundColor: 'rgba(0, 177, 227, 0.2)',
+                      boxShadow: '0 0 15px rgba(0, 177, 227, 0.3)',
                     }}
                   >
-                    <Icon className="w-6 h-6" style={{ color: '#00ff00', filter: 'drop-shadow(0 0 5px #00ff00)' }} />
+                    <Icon className="w-6 h-6" style={{ color: '#00B1E3', filter: 'drop-shadow(0 0 5px rgba(0, 177, 227, 0.5))' }} />
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-bold text-xl transition-colors duration-300" style={{ color: '#ffffff', textShadow: '0 0 10px #00ff00' }}>
+                  <h3 className="font-bold text-xl transition-colors duration-300" style={{ color: '#ffffff', textShadow: '0 0 10px rgba(0, 177, 227, 0.4)' }}>
                     {service.title}
                   </h3>
 
@@ -201,7 +201,7 @@ export default function ServicesSection() {
                   </p>
 
                   {/* Arrow indicator */}
-                  <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" style={{ color: '#00ffff' }}>
+                  <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" style={{ color: '#00B1E3' }}>
                     <span className="text-xs font-semibold">{language === 'es' ? 'Explorar' : 'Explore'}</span>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -218,13 +218,13 @@ export default function ServicesSection() {
           <div
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 hover:scale-105 transition-all duration-300 cursor-pointer group"
             style={{
-              borderColor: '#00ff00',
-              backgroundColor: 'rgba(0, 255, 0, 0.1)',
-              boxShadow: '0 0 15px rgba(0, 255, 0, 0.3)',
+              borderColor: '#00B1E3',
+              backgroundColor: 'rgba(0, 177, 227, 0.1)',
+              boxShadow: '0 0 15px rgba(0, 177, 227, 0.3)',
             }}
           >
-            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#00ff00', animation: 'pulse 2s infinite' }}></div>
-            <span className="text-sm transition-colors duration-300" style={{ color: '#00ff00', textShadow: '0 0 10px #00ff00' }}>
+            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#00B1E3', animation: 'pulse 2s infinite' }}></div>
+            <span className="text-sm transition-colors duration-300" style={{ color: '#00B1E3', textShadow: '0 0 10px rgba(0, 177, 227, 0.4)' }}>
               {language === 'es' ? 'Más de 50 proyectos completados' : 'More than 50 completed projects'}
             </span>
           </div>
