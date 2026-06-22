@@ -130,3 +130,39 @@
 - [x] Transiciones de página suave
 - [x] Efectos de hover en botones mejorados
 - [x] Animaciones de texto dinámicas
+
+
+## Rediseño Estilo Neón (Referencia Portafolio Villegas)
+
+### Fondo y Partículas
+- [ ] Fondo oscuro (#0a0e27 o similar)
+- [ ] Efecto de partículas/estrellas animadas
+- [ ] Líneas decorativas con efecto de cuadrícula
+- [ ] Elementos flotantes con movimiento suave
+
+### Colores Neón
+- [ ] Verde neón (#00FF00 o similar) para acentos principales
+- [ ] Cian/Azul neón (#00FFFF o similar) para secundarios
+- [ ] Magenta/Rosa neón para detalles
+- [ ] Mantener azul de marca #00B1E3 como color terciario
+
+### Tipografía y Efectos
+- [ ] Títulos en bold con efecto de glow neón
+- [ ] Botones con bordes neón pulsantes
+- [ ] Efectos de brillo en hover
+- [ ] Sombras de color neón
+
+### Componentes a Actualizar
+- [ ] Hero Section con fondo de partículas
+- [ ] Servicios con bordes neón
+- [ ] Portafolio con efectos de glow
+- [ ] About con cards neón
+- [ ] Botones con animaciones neón
+- [ ] Navigation con estilo neón
+
+### Animaciones
+- [ ] Partículas que se mueven y flotan
+- [ ] Efectos de glow pulsante
+- [ ] Bordes que se iluminan en hover
+- [ ] Transiciones suaves con colores neón
+- [ ] Efectos de brillo dinámicos

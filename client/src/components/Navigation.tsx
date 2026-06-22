@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { Menu, X, MessageCircle } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useState } from 'react';
 
 const translations = {
   es: {
@@ -34,71 +34,99 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b"
+      style={{
+        backgroundColor: 'rgba(10, 14, 39, 0.95)',
+        borderColor: '#00ff00',
+        boxShadow: '0 0 20px rgba(0, 255, 0, 0.2)',
+      }}
+    >
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
-        <div className="font-logo text-xl font-semibold text-white">
+        <div
+          className="font-black text-xl font-semibold"
+          style={{
+            color: '#ffffff',
+            textShadow: '0 0 15px #00ff00, 0 0 30px #00ffff',
+          }}
+        >
           Blue's Creative Agency
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <button
-            onClick={() => scrollToSection('services')}
-            className="text-sm text-muted-foreground hover:text-primary-blue transition-smooth"
-          >
-            {t.services}
-          </button>
-          <button
-            onClick={() => scrollToSection('portfolio')}
-            className="text-sm text-muted-foreground hover:text-primary-blue transition-smooth"
-          >
-            {t.portfolio}
-          </button>
-          <button
-            onClick={() => scrollToSection('about')}
-            className="text-sm text-muted-foreground hover:text-primary-blue transition-smooth"
-          >
-            {t.about}
-          </button>
-          <button
-            onClick={() => scrollToSection('contact')}
-            className="text-sm text-muted-foreground hover:text-primary-blue transition-smooth"
-          >
-            {t.contact}
-          </button>
+          {[
+            { label: t.services, id: 'services' },
+            { label: t.portfolio, id: 'portfolio' },
+            { label: t.about, id: 'about' },
+            { label: t.contact, id: 'contact' },
+          ].map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className="text-sm font-medium transition-all duration-300 hover:scale-110"
+              style={{
+                color: '#ffffff',
+                textShadow: '0 0 5px #00ffff',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = '#00ff00';
+                e.currentTarget.style.textShadow = '0 0 10px #00ff00, 0 0 20px #00ff00';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = '#ffffff';
+                e.currentTarget.style.textShadow = '0 0 5px #00ffff';
+              }}
+            >
+              {item.label}
+            </button>
+          ))}
         </div>
 
         {/* Right Section */}
         <div className="hidden md:flex items-center gap-4">
           {/* Language Switcher */}
-          <div className="flex gap-2 border border-border rounded-lg p-1">
-            <button
-              onClick={() => setLanguage('es')}
-              className={`px-3 py-1 text-xs font-medium rounded transition-smooth ${
-                language === 'es'
-                  ? 'bg-primary-blue text-background'
-                  : 'text-muted-foreground hover:text-foreground'
-              }`}
-            >
-              ES
-            </button>
-            <button
-              onClick={() => setLanguage('en')}
-              className={`px-3 py-1 text-xs font-medium rounded transition-smooth ${
-                language === 'en'
-                  ? 'bg-primary-blue text-background'
-                  : 'text-muted-foreground hover:text-foreground'
-              }`}
-            >
-              EN
-            </button>
+          <div
+            className="flex gap-2 rounded-lg p-1"
+            style={{
+              border: '2px solid #00ff00',
+              backgroundColor: 'rgba(0, 255, 0, 0.1)',
+              boxShadow: '0 0 10px rgba(0, 255, 0, 0.3)',
+            }}
+          >
+            {['es', 'en'].map((lang) => (
+              <button
+                key={lang}
+                onClick={() => setLanguage(lang as 'es' | 'en')}
+                className="px-3 py-1 text-xs font-bold rounded transition-all duration-300"
+                style={{
+                  backgroundColor: language === lang ? '#00ff00' : 'transparent',
+                  color: language === lang ? '#000000' : '#00ff00',
+                  textShadow: language === lang ? 'none' : '0 0 5px #00ff00',
+                }}
+              >
+                {lang.toUpperCase()}
+              </button>
+            ))}
           </div>
 
           {/* CTA Button */}
           <Button
             onClick={() => scrollToSection('contact')}
-            className="bg-primary-blue hover:bg-primary-blue/90 text-background font-medium glow-blue transition-smooth"
+            className="font-bold px-6 py-2 rounded-full transition-all duration-300 hover:scale-110"
+            style={{
+              backgroundColor: '#00ff00',
+              color: '#000000',
+              border: '2px solid #00ff00',
+              boxShadow: '0 0 20px #00ff00',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = '0 0 40px #00ff00, 0 0 60px #00ffff';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = '0 0 20px #00ff00';
+            }}
           >
             {t.contactBtn}
           </Button>
@@ -107,32 +135,35 @@ export default function Navigation() {
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center gap-3">
           {/* Language Switcher Mobile */}
-          <div className="flex gap-1 border border-border rounded p-1">
-            <button
-              onClick={() => setLanguage('es')}
-              className={`px-2 py-1 text-xs font-medium rounded transition-smooth ${
-                language === 'es'
-                  ? 'bg-primary-blue text-background'
-                  : 'text-muted-foreground'
-              }`}
-            >
-              ES
-            </button>
-            <button
-              onClick={() => setLanguage('en')}
-              className={`px-2 py-1 text-xs font-medium rounded transition-smooth ${
-                language === 'en'
-                  ? 'bg-primary-blue text-background'
-                  : 'text-muted-foreground'
-              }`}
-            >
-              EN
-            </button>
+          <div
+            className="flex gap-1 rounded p-1"
+            style={{
+              border: '2px solid #00ff00',
+              backgroundColor: 'rgba(0, 255, 0, 0.1)',
+            }}
+          >
+            {['es', 'en'].map((lang) => (
+              <button
+                key={lang}
+                onClick={() => setLanguage(lang as 'es' | 'en')}
+                className="px-2 py-1 text-xs font-bold rounded transition-all duration-300"
+                style={{
+                  backgroundColor: language === lang ? '#00ff00' : 'transparent',
+                  color: language === lang ? '#000000' : '#00ff00',
+                }}
+              >
+                {lang.toUpperCase()}
+              </button>
+            ))}
           </div>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-primary-blue hover:text-primary-blue/80 transition-smooth"
+            className="transition-all duration-300"
+            style={{
+              color: '#00ff00',
+              filter: 'drop-shadow(0 0 5px #00ff00)',
+            }}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -141,35 +172,41 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-card border-b border-border">
+        <div
+          style={{
+            backgroundColor: 'rgba(10, 14, 39, 0.98)',
+            borderTop: '2px solid #00ff00',
+            boxShadow: '0 0 20px rgba(0, 255, 0, 0.2)',
+          }}
+        >
           <div className="container py-4 flex flex-col gap-4">
-            <button
-              onClick={() => scrollToSection('services')}
-              className="text-left text-sm text-muted-foreground hover:text-primary-blue transition-smooth"
-            >
-              {t.services}
-            </button>
-            <button
-              onClick={() => scrollToSection('portfolio')}
-              className="text-left text-sm text-muted-foreground hover:text-primary-blue transition-smooth"
-            >
-              {t.portfolio}
-            </button>
-            <button
-              onClick={() => scrollToSection('about')}
-              className="text-left text-sm text-muted-foreground hover:text-primary-blue transition-smooth"
-            >
-              {t.about}
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="text-left text-sm text-muted-foreground hover:text-primary-blue transition-smooth"
-            >
-              {t.contact}
-            </button>
+            {[
+              { label: t.services, id: 'services' },
+              { label: t.portfolio, id: 'portfolio' },
+              { label: t.about, id: 'about' },
+              { label: t.contact, id: 'contact' },
+            ].map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="text-left text-sm font-medium transition-all duration-300"
+                style={{
+                  color: '#00ff00',
+                  textShadow: '0 0 10px #00ff00',
+                }}
+              >
+                {item.label}
+              </button>
+            ))}
             <Button
               onClick={() => scrollToSection('contact')}
-              className="w-full bg-primary-blue hover:bg-primary-blue/90 text-background font-medium mt-2"
+              className="w-full font-bold mt-2 rounded-full"
+              style={{
+                backgroundColor: '#00ff00',
+                color: '#000000',
+                border: '2px solid #00ff00',
+                boxShadow: '0 0 20px #00ff00',
+              }}
             >
               {t.contactBtn}
             </Button>
