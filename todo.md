@@ -169,10 +169,16 @@
 
 
 ## Caso de Éxito: Waku Energy Drink
-- [ ] Subir y usar la imagen de portada de Waku Energy Drink
-- [ ] Añadir descripción profesional del video personalizado para ecommerce
-- [ ] Añadir identidad visual, logotipo, paleta de colores y tipografía
-- [ ] Añadir iconos de Illustrator, Photoshop y CapCut
-- [ ] Preparar el apartado de video para integrar el archivo cuando sea enviado
+- [x] Subir y usar la imagen de portada de Waku Energy Drink
+- [x] Añadir descripción profesional del video personalizado para ecommerce
+- [x] Añadir identidad visual, logotipo, paleta de colores y tipografía
+- [x] Mostrar iconos de Illustrator y Photoshop y retirar CapCut al no encontrar una fuente oficial verificable
+- [x] Preparar el apartado de video para integrar el archivo cuando sea enviado
 - [ ] Verificar la vista responsive del proyecto Waku
-- [ ] Guardar checkpoint del proyecto Waku actualizado
+- [x] Guardar checkpoint del proyecto Waku actualizado
+
+
+## Corrección de icono de CapCut
+- [x] Verificar el logotipo oficial de CapCut
+- [x] Usar el logotipo oficial o retirar el icono si no se puede verificar
+- [ ] Verificar el modal Waku y guardar checkpoint de la corrección

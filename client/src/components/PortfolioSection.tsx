@@ -31,7 +31,6 @@ const translations = {
         softwares: [
           { name: 'Illustrator', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968502.png' },
           { name: 'Photoshop', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968520.png' },
-          { name: 'CapCut', icon: 'https://cdn-icons-png.flaticon.com/512/888/888857.png' },
         ],
         color: 'from-emerald-500 to-cyan-500',
       },
@@ -93,7 +92,6 @@ const translations = {
         softwares: [
           { name: 'Illustrator', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968502.png' },
           { name: 'Photoshop', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968520.png' },
-          { name: 'CapCut', icon: 'https://cdn-icons-png.flaticon.com/512/888/888857.png' },
         ],
         color: 'from-emerald-500 to-cyan-500',
       },
