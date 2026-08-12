@@ -37,8 +37,20 @@ const translations = {
       {
         id: 3,
         title: 'Blue\'s Creative Agency',
-        category: 'Web Design',
-        description: 'Sitio web corporativo moderno con diseño minimalista y experiencia de usuario optimizada',
+        category: 'Web Design & Digital Experience',
+        description: 'Diseño y desarrollo de la plataforma web oficial de Blue\'s Creative Agency con identidad tecnológica, experiencia bilingüe y herramientas digitales integradas',
+        fullDescription: 'Para Blue\'s Creative Agency diseñamos y desarrollamos una landing page premium que convierte la identidad de la agencia en una experiencia digital moderna, tecnológica y estratégica. El sitio fue construido para presentar los servicios, proyectos y valores de la marca con una navegación clara, una estética oscura de alto impacto y una experiencia consistente en desktop, tablet y móvil.\n\nEl proyecto incluyó:\n\n• Dirección visual basada en la identidad de Blue\'s Creative Agency, con fondo oscuro, iluminación azul, efectos de glow y composición minimalista\n• Hero section con el eslogan “Where Creativity Meets Technology”, logotipo de la agencia, llamadas a la acción y fondo animado con partículas y cuadrícula tecnológica\n• Sección de servicios para Branding, Diseño Web, Desarrollo Digital, Contenido Digital y Soluciones de IA\n• Portafolio de casos de éxito con tarjetas interactivas y modales para mostrar imágenes, descripciones y herramientas de cada proyecto\n• Secciones de propósito, misión, visión y valores de marca para comunicar el posicionamiento estratégico de la agencia\n• Formulario de contacto conectado al backend, validación de datos y notificación al propietario ante nuevas consultas\n• Integración directa con WhatsApp, enlaces sociales, footer corporativo y datos de contacto\n• Chat inteligente con contexto específico de la agencia para responder preguntas sobre servicios, precios aproximados y proceso de trabajo\n• Selector de idioma entre español e inglés, junto con optimización responsive, SEO, accesibilidad y animaciones suaves\n\nEl resultado es una presencia digital completa que une diseño, branding, desarrollo web e inteligencia artificial en una experiencia clara, memorable y preparada para acompañar el crecimiento de la agencia.',
+        image: '/manus-storage/blues-creative-agency-web_a1836074.png',
+        softwares: [
+          { name: 'React', icon: 'https://cdn.simpleicons.org/react/61DAFB' },
+          { name: 'TypeScript', icon: 'https://cdn.simpleicons.org/typescript/3178C6' },
+          { name: 'Tailwind CSS', icon: 'https://cdn.simpleicons.org/tailwindcss/06B6D4' },
+          { name: 'Vite', icon: 'https://cdn.simpleicons.org/vite/646CFF' },
+          { name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs/339933' },
+          { name: 'Express', icon: 'https://cdn.simpleicons.org/express/FFFFFF' },
+          { name: 'tRPC', icon: 'https://cdn.simpleicons.org/trpc/2596BE' },
+          { name: 'Drizzle ORM', icon: 'https://cdn.simpleicons.org/drizzle/C5F74F' },
+        ],
         color: 'from-cyan-500 to-blue-500',
       },
       {
@@ -98,8 +110,20 @@ const translations = {
       {
         id: 3,
         title: 'Blue\'s Creative Agency',
-        category: 'Web Design',
-        description: 'Modern corporate website with minimalist design and optimized user experience',
+        category: 'Web Design & Digital Experience',
+        description: 'Design and development of Blue\'s Creative Agency\'s official website with a technology-driven identity, bilingual experience and integrated digital tools',
+        fullDescription: 'For Blue\'s Creative Agency, we designed and developed a premium landing page that translates the agency\'s identity into a modern, technological and strategic digital experience. The website was built to present the agency\'s services, projects and values through clear navigation, a high-impact dark aesthetic and a consistent experience across desktop, tablet and mobile.\n\nThe project included:\n\n• Visual direction based on Blue\'s Creative Agency\'s identity, with a dark background, blue lighting, glow effects and minimalist composition\n• Hero section with the “Where Creativity Meets Technology” slogan, agency logo, calls to action and an animated background with particles and a technology grid\n• Services section for Branding, Web Design, Digital Development, Digital Content and AI Solutions\n• Portfolio of success stories with interactive cards and modals for project images, descriptions and tools\n• Purpose, mission, vision and brand values sections to communicate the agency\'s strategic positioning\n• Contact form connected to the backend, data validation and owner notifications for new enquiries\n• Direct WhatsApp integration, social links, corporate footer and contact information\n• Intelligent chat with agency-specific context to answer questions about services, approximate pricing and the working process\n• Spanish and English language switcher, together with responsive, SEO, accessibility and smooth-animation optimizations\n\nThe result is a complete digital presence that brings together design, branding, web development and artificial intelligence in a clear, memorable experience prepared to support the agency\'s growth.',
+        image: '/manus-storage/blues-creative-agency-web_a1836074.png',
+        softwares: [
+          { name: 'React', icon: 'https://cdn.simpleicons.org/react/61DAFB' },
+          { name: 'TypeScript', icon: 'https://cdn.simpleicons.org/typescript/3178C6' },
+          { name: 'Tailwind CSS', icon: 'https://cdn.simpleicons.org/tailwindcss/06B6D4' },
+          { name: 'Vite', icon: 'https://cdn.simpleicons.org/vite/646CFF' },
+          { name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs/339933' },
+          { name: 'Express', icon: 'https://cdn.simpleicons.org/express/FFFFFF' },
+          { name: 'tRPC', icon: 'https://cdn.simpleicons.org/trpc/2596BE' },
+          { name: 'Drizzle ORM', icon: 'https://cdn.simpleicons.org/drizzle/C5F74F' },
+        ],
         color: 'from-cyan-500 to-blue-500',
       },
       {
@@ -200,6 +224,19 @@ export default function PortfolioSection() {
               >
                 {/* Gradient Background */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
+
+                {/* Cover image */}
+                {'image' in project && project.image && (
+                  <div className="relative z-10 aspect-[16/9] overflow-hidden border-b border-primary-blue/20">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A1525] via-transparent to-transparent opacity-80" />
+                  </div>
+                )}
 
                 {/* Content */}
                 <div className="relative z-10 p-6">

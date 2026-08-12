@@ -181,4 +181,13 @@
 ## Corrección de icono de CapCut
 - [x] Verificar el logotipo oficial de CapCut
 - [x] Usar el logotipo oficial o retirar el icono si no se puede verificar
-- [ ] Verificar el modal Waku y guardar checkpoint de la corrección
+- [x] Verificar el modal Waku y guardar checkpoint de la corrección
+
+
+## Caso de Éxito: Blue's Creative Agency — Web Design
+- [x] Subir y usar la imagen de portada del sitio web
+- [x] Añadir resumen profesional del diseño y desarrollo del sitio
+- [x] Añadir software y tecnologías utilizadas en el proyecto
+- [x] Añadir iconos de las tecnologías en el modal del portafolio
+- [ ] Verificar la vista responsive del caso de éxito
+- [ ] Guardar checkpoint del proyecto actualizado
