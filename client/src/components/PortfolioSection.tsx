@@ -24,9 +24,16 @@ const translations = {
       {
         id: 2,
         title: 'Waku Energy Drink',
-        category: 'Visual Design',
-        description: 'Experiencia visual única con elementos 3D y animaciones para marca de bebidas',
-        color: 'from-blue-500 to-cyan-500',
+        category: 'Branding, Video & E-commerce',
+        description: 'Identidad visual completa, logotipo, paleta de colores, tipografía y video personalizado para e-commerce',
+        fullDescription: 'Para el proyecto Waku Energy Drink, desarrollamos una estrategia integral de branding y contenido audiovisual enfocada en potenciar su presencia en e-commerce y redes sociales.\n\nEl proyecto abarcó:\n\n• Creación de un video totalmente personalizado para e-commerce con alto impacto visual y dinámicas de conversión\n• Desarrollo completo de su identidad visual corporativa\n• Diseño de logotipo exclusivo y memorable\n• Definición estratégica de la paleta de colores corporativa orientada a transmitir energía y naturalidad\n• Selección y adaptación de tipografía exclusiva para packaging y comunicación digital\n\nEl resultado es una marca vibrante, lista para dominar el mercado digital y cautivar a los consumidores más exigentes con un estándar visual de primer nivel.',
+        image: '/manus-storage/waku-energy-drink_486fc6b5.png',
+        softwares: [
+          { name: 'Illustrator', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968502.png' },
+          { name: 'Photoshop', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968520.png' },
+          { name: 'CapCut', icon: 'https://cdn-icons-png.flaticon.com/512/888/888857.png' },
+        ],
+        color: 'from-emerald-500 to-cyan-500',
       },
       {
         id: 3,
@@ -79,9 +86,16 @@ const translations = {
       {
         id: 2,
         title: 'Waku Energy Drink',
-        category: 'Visual Design',
-        description: 'Unique visual experience with 3D elements and animations for beverage brand',
-        color: 'from-blue-500 to-cyan-500',
+        category: 'Branding, Video & E-commerce',
+        description: 'Complete visual identity, logo, color palette, typography and custom e-commerce video',
+        fullDescription: 'For the Waku Energy Drink project, we developed a comprehensive branding and audiovisual content strategy focused on boosting its presence in e-commerce and social media.\n\nThe project included:\n\n• Creation of a fully customized e-commerce video with high visual impact and conversion dynamics\n• Complete development of corporate visual identity\n• Exclusive and memorable logo design\n• Strategic definition of corporate color palette aimed at conveying energy and naturalness\n• Selection and adaptation of exclusive typography for packaging and digital communication\n\nThe result is a vibrant brand, ready to dominate the digital market and captivate the most demanding consumers with top-tier visual standards.',
+        image: '/manus-storage/waku-energy-drink_486fc6b5.png',
+        softwares: [
+          { name: 'Illustrator', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968502.png' },
+          { name: 'Photoshop', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968520.png' },
+          { name: 'CapCut', icon: 'https://cdn-icons-png.flaticon.com/512/888/888857.png' },
+        ],
+        color: 'from-emerald-500 to-cyan-500',
       },
       {
         id: 3,

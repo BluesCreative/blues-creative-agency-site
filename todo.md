@@ -166,3 +166,13 @@
 - [ ] Bordes que se iluminan en hover
 - [ ] Transiciones suaves con colores neón
 - [ ] Efectos de brillo dinámicos
+
+
+## Caso de Éxito: Waku Energy Drink
+- [ ] Subir y usar la imagen de portada de Waku Energy Drink
+- [ ] Añadir descripción profesional del video personalizado para ecommerce
+- [ ] Añadir identidad visual, logotipo, paleta de colores y tipografía
+- [ ] Añadir iconos de Illustrator, Photoshop y CapCut
+- [ ] Preparar el apartado de video para integrar el archivo cuando sea enviado
+- [ ] Verificar la vista responsive del proyecto Waku
+- [ ] Guardar checkpoint del proyecto Waku actualizado
