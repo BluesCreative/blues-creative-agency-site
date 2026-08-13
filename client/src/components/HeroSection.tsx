@@ -41,7 +41,7 @@ export default function HeroSection() {
         {/* Logo Section */}
         <div className="mb-6 md:mb-8 animate-fade-in-up">
           <img
-            src="/manus-storage/blues-logo-outline_16e6773d.png"
+            src="https://bluescreat-z5qxfsrw.manus.space/manus-storage/blues-logo-outline_16e6773d_9bbe9948.png"
             alt="Blue's Creative Agency"
             className="h-24 md:h-32 w-auto mx-auto transition-all duration-300 hover:scale-110"
             style={{

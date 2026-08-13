@@ -45,7 +45,7 @@ export default function Navigation() {
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
         <img
-          src="/manus-storage/blues-logo-outline_16e6773d.png"
+          src="https://bluescreat-z5qxfsrw.manus.space/manus-storage/blues-logo-outline_16e6773d_9bbe9948.png"
           alt="Blue's Creative Agency"
           className="h-12 w-auto transition-all duration-300 hover:scale-105"
           style={{

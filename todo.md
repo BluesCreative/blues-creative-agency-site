@@ -229,3 +229,19 @@
 - [x] Mostrar un recuadro animado al hacer clic en cada servicio
 - [x] Mantener la interacción accesible, responsive y coherente con el estilo visual de la agencia
 - [x] Verificar la interacción y guardar checkpoint
+
+
+## Publicación solicitada en Netlify
+- [x] Inspeccionar la conexión y las capacidades disponibles de Netlify
+- [x] Preparar build, variables y configuración compatible con Netlify
+- [x] Crear el sitio o despliegue en Netlify
+- [x] Verificar la URL desplegada, rutas, assets y funcionalidades principales
+- [x] Documentar el resultado y cualquier requisito pendiente
+
+
+## Correcciones de compatibilidad Netlify
+- [x] Sustituir las referencias /manus-storage/ por assets accesibles desde Netlify
+- [x] Verificar que logo y portadas del portafolio carguen en la URL pública
+- [x] Evaluar y documentar la disponibilidad del backend tRPC/AI/contacto en Netlify
+- [x] Rehacer el despliegue y verificar la funcionalidad pública
+- [x] Conectar /api/trpc de Netlify con el backend público de Manus mediante proxy seguro

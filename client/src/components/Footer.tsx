@@ -81,7 +81,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="mb-6">
               <img
-                src="/manus-storage/blues-logo-outline_16e6773d.png"
+                src="https://bluescreat-z5qxfsrw.manus.space/manus-storage/blues-logo-outline_16e6773d_9bbe9948.png"
                 alt="Blue's Creative Agency"
                 className="h-12 w-auto"
                 style={{
