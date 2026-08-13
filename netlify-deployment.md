@@ -4,11 +4,11 @@
 
 La producción está publicada en:
 
-https://cute-dango-40fcae.netlify.app
+https://bluescreative-agency.netlify.app
 
 El proyecto de administración está disponible en:
 
-https://app.netlify.com/projects/cute-dango-40fcae
+https://app.netlify.com/projects/bluescreative-agency
 
 ## Publicación
 

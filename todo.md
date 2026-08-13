@@ -245,3 +245,7 @@
 - [x] Evaluar y documentar la disponibilidad del backend tRPC/AI/contacto en Netlify
 - [x] Rehacer el despliegue y verificar la funcionalidad pública
 - [x] Conectar /api/trpc de Netlify con el backend público de Manus mediante proxy seguro
+
+
+## Cambio de subdominio Netlify
+- [x] Cambiar el nombre público a bluescreative-agency.netlify.app y verificar el enlace compartible
