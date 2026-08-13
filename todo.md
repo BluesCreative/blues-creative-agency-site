@@ -222,3 +222,10 @@
 - [x] Eliminar el proyecto Contenido Multimedia de la traducción en español
 - [x] Eliminar el proyecto Multimedia Content de la traducción en inglés
 - [x] Verificar que el último proyecto visible sea Fuego Restaurante Bar y guardar checkpoint
+
+
+## Procesos interactivos de servicios
+- [x] Añadir contenido paso a paso bilingüe para Branding, Diseño Web, Desarrollo Digital, Contenido Digital y Soluciones de IA
+- [x] Mostrar un recuadro animado al hacer clic en cada servicio
+- [x] Mantener la interacción accesible, responsive y coherente con el estilo visual de la agencia
+- [x] Verificar la interacción y guardar checkpoint
