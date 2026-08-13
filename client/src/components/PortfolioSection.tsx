@@ -55,9 +55,17 @@ const translations = {
       },
       {
         id: 4,
-        title: 'Proyecto Corporativo',
-        category: 'Branding',
-        description: 'Estrategia de branding completa incluyendo identidad visual y guía de marca',
+        title: 'Proyecto Corporativo Branding — Lumma Smart Hydration',
+        category: 'Branding & E-commerce',
+        description: 'Identidad visual completa para Lumma Smart Hydration, una marca de termos para agua con posicionamiento moderno, funcional y urbano',
+        fullDescription: 'Para Lumma Smart Hydration creamos desde cero la identidad visual de una marca dedicada a la venta de termos para agua. El proyecto se desarrolló para construir una presencia distintiva, contemporánea y preparada para conectar con consumidores que buscan hidratación, diseño y funcionalidad en su vida diaria.\n\nEl trabajo incluyó:\n\n• Desarrollo integral de la identidad visual de Lumma Smart Hydration\n• Definición de una colorimetría propia para comunicar tecnología, confianza y estilo de vida activo\n• Selección y adaptación de la tipografía para lograr una comunicación limpia, memorable y consistente\n• Construcción de un sistema visual aplicable a productos, piezas digitales y comunicación comercial\n• Diseño de recursos gráficos para presentar los termos de forma aspiracional y profesional\n• Producción de un video comercial personalizado para e-commerce, pensado para destacar el producto, reforzar sus atributos y acompañar la decisión de compra\n• Dirección visual orientada a una marca moderna, premium y fácil de reconocer en canales digitales\n\nEl resultado es una identidad coherente y versátil que presenta a Lumma como una marca de hidratación inteligente, combinando estética, funcionalidad y una comunicación visual preparada para crecer en el entorno digital.',
+        image: '/manus-storage/lumma-smart-hydration_854cb7d1.png',
+        softwares: [
+          { name: 'Illustrator', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968502.png' },
+          { name: 'Photoshop', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968520.png' },
+          { name: 'Premiere Pro', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968534.png' },
+          { name: 'CapCut' },
+        ],
         color: 'from-purple-500 to-pink-500',
       },
       {
@@ -128,9 +136,17 @@ const translations = {
       },
       {
         id: 4,
-        title: 'Corporate Project',
-        category: 'Branding',
-        description: 'Complete branding strategy including visual identity and brand guidelines',
+        title: 'Corporate Branding Project — Lumma Smart Hydration',
+        category: 'Branding & E-commerce',
+        description: 'Complete visual identity for Lumma Smart Hydration, a water bottle brand with a modern, functional and urban positioning',
+        fullDescription: 'For Lumma Smart Hydration, we created the visual identity from scratch for a brand dedicated to selling water bottles. The project was developed to build a distinctive, contemporary presence prepared to connect with consumers who value hydration, design and functionality in everyday life.\n\nThe work included:\n\n• Complete visual identity development for Lumma Smart Hydration\n• Definition of a distinctive color system designed to communicate technology, trust and an active lifestyle\n• Typography selection and adaptation for clean, memorable and consistent communication\n• Construction of a visual system applicable to products, digital pieces and commercial communication\n• Graphic resources designed to present the bottles in an aspirational and professional way\n• Production of a customized e-commerce commercial video focused on highlighting the product, reinforcing its benefits and supporting purchase decisions\n• Visual direction oriented toward a modern, premium brand that is easy to recognize across digital channels\n\nThe result is a coherent and versatile identity that positions Lumma as a smart hydration brand, combining aesthetics, functionality and a visual language prepared to grow in the digital environment.',
+        image: '/manus-storage/lumma-smart-hydration_854cb7d1.png',
+        softwares: [
+          { name: 'Illustrator', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968502.png' },
+          { name: 'Photoshop', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968520.png' },
+          { name: 'Premiere Pro', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968534.png' },
+          { name: 'CapCut' },
+        ],
         color: 'from-purple-500 to-pink-500',
       },
       {

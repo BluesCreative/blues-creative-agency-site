@@ -190,4 +190,14 @@
 - [x] Añadir software y tecnologías utilizadas en el proyecto
 - [x] Añadir iconos de las tecnologías en el modal del portafolio
 - [ ] Verificar la vista responsive del caso de éxito
+- [x] Guardar checkpoint del proyecto actualizado
+
+
+## Caso de Éxito: Proyecto Corporativo Branding — Lumma Smart Hydration
+- [x] Subir y usar la imagen de portada de Lumma Smart Hydration
+- [x] Añadir descripción profesional de la identidad visual creada desde cero
+- [x] Añadir información del video comercial para e-commerce
+- [x] Añadir softwares utilizados: Illustrator, Photoshop, Premiere Pro y CapCut
+- [x] Mostrar iconos de Illustrator, Photoshop y Premiere Pro y mantener CapCut sin icono no verificado
+- [x] Verificar la tarjeta del caso de éxito en desktop y móvil
 - [ ] Guardar checkpoint del proyecto actualizado

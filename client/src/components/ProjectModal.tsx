@@ -12,7 +12,7 @@ interface ProjectModalProps {
     description: string;
     fullDescription?: string;
     videoUrl?: string;
-    softwares?: Array<{ name: string; icon: string }>;
+    softwares?: Array<{ name: string; icon?: string }>;
     image?: string;
   };
 }
@@ -150,11 +150,20 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
                     key={index}
                     className="flex flex-col items-center gap-2 p-4 rounded-lg border border-[#00B1E3]/30 bg-[#00B1E3]/5 hover:bg-[#00B1E3]/10 transition-all duration-300"
                   >
-                    <img
-                      src={software.icon}
-                      alt={software.name}
-                      className="w-12 h-12 object-contain"
-                    />
+                    {software.icon ? (
+                      <img
+                        src={software.icon}
+                        alt={software.name}
+                        className="w-12 h-12 object-contain"
+                      />
+                    ) : (
+                      <span
+                        aria-hidden="true"
+                        className="flex h-12 w-12 items-center justify-center rounded-lg border border-[#00B1E3]/40 text-xs font-bold tracking-widest text-[#00B1E3]"
+                      >
+                        APP
+                      </span>
+                    )}
                     <span className="text-sm font-semibold text-gray-300">
                       {software.name}
                     </span>
