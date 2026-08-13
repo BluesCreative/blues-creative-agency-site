@@ -209,4 +209,10 @@
 - [x] Incluir características interactivas (opiniones reales, ubicación, misión, visión, comunidad, platos típicos, especiales y cocteles)
 - [x] Añadir tecnologías utilizadas: Tailwind CSS, React, TypeScript y Node.js con sus iconos en el modal
 - [x] Verificar la tarjeta de Fuego Restaurante Bar en desktop y móvil
-- [ ] Guardar checkpoint del proyecto actualizado
+- [x] Guardar checkpoint del proyecto actualizado
+
+
+## Portada del caso Fuego Restaurante Bar
+- [x] Subir y usar la imagen de portada proporcionada en la tarjeta del portafolio
+- [x] Mostrar la portada también en el modal de detalle
+- [ ] Verificar la visualización responsive y guardar checkpoint
