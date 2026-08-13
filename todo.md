@@ -215,4 +215,10 @@
 ## Portada del caso Fuego Restaurante Bar
 - [x] Subir y usar la imagen de portada proporcionada en la tarjeta del portafolio
 - [x] Mostrar la portada también en el modal de detalle
-- [ ] Verificar la visualización responsive y guardar checkpoint
+- [x] Verificar la visualización responsive y guardar checkpoint
+
+
+## Eliminación solicitada: Contenido Multimedia
+- [x] Eliminar el proyecto Contenido Multimedia de la traducción en español
+- [x] Eliminar el proyecto Multimedia Content de la traducción en inglés
+- [x] Verificar que el último proyecto visible sea Fuego Restaurante Bar y guardar checkpoint

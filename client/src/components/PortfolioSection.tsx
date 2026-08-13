@@ -83,13 +83,6 @@ const translations = {
         ],
         color: 'from-green-500 to-emerald-500',
       },
-      {
-        id: 6,
-        title: 'Contenido Multimedia',
-        category: 'Digital Content',
-        description: 'Estrategia de contenido digital con videos, gráficos y copywriting profesional',
-        color: 'from-yellow-500 to-orange-500',
-      },
     ],
   },
   en: {
@@ -171,13 +164,6 @@ const translations = {
           { name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs/339933' },
         ],
         color: 'from-green-500 to-emerald-500',
-      },
-      {
-        id: 6,
-        title: 'Multimedia Content',
-        category: 'Digital Content',
-        description: 'Digital content strategy with videos, graphics and professional copywriting',
-        color: 'from-yellow-500 to-orange-500',
       },
     ],
   },
