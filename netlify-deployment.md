@@ -20,7 +20,7 @@ El logotipo y las cinco portadas del portafolio se gestionan mediante almacenami
 
 ## Verificaciones
 
-El build pasó correctamente con TypeScript, Vitest y Vite: 23 pruebas unitarias pasaron. La URL pública cargó el hero, navegación, servicios, portafolio, contacto y footer. El logo y las cinco portadas principales se verificaron con respuesta HTTP 200 desde el almacenamiento persistente. El proxy tRPC respondió correctamente a `chat.createSession` y a una mutación real de `chat.sendMessage`. En el navegador público se comprobó la expansión del proceso de Branding con cinco pasos y la apertura del modal de GasBone Mango Energy. El endpoint público de contacto respondió correctamente con HTTP 400 ante un correo inválido, confirmando la validación sin crear un registro de prueba.
+El build pasó correctamente con TypeScript, Vitest y Vite: 23 pruebas unitarias pasaron. La URL pública cargó el hero, navegación, servicios, portafolio, contacto y footer. El logo y las cinco portadas principales (incluyendo la nueva portada de Fuego Restaurante Bar) se verificaron con respuesta HTTP 200 desde el almacenamiento persistente. El proxy tRPC respondió correctamente a `chat.createSession` y a una mutación real de `chat.sendMessage`. En el navegador público se comprobó la expansión del proceso de Branding con cinco pasos y la apertura del modal de GasBone Mango Energy. El endpoint público de contacto respondió correctamente con HTTP 400 ante un correo inválido, confirmando la validación sin crear un registro de prueba.
 
 ## Nota operativa
 

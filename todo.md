@@ -249,3 +249,10 @@
 
 ## Cambio de subdominio Netlify
 - [x] Cambiar el nombre público a bluescreative-agency.netlify.app y verificar el enlace compartible
+
+
+## Actualización de portada: Fuego Restaurante Bar
+- [x] Subir la nueva imagen proporcionada a almacenamiento persistente
+- [x] Reemplazar la portada de Fuego en la tarjeta y el modal del portafolio
+- [x] Ejecutar pruebas y build de producción
+- [x] Publicar en Netlify y verificar la tarjeta y el modal en la URL pública
