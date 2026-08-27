@@ -288,3 +288,4 @@
 - [x] Evitar que GitHub Pages cargue el script de analítica placeholder y eliminar el error 404 de consola
 - [ ] Desplegar a GitHub Pages el build actualizado con el guard de analítica
 - [ ] Reejecutar la prueba pública y confirmar que no quedan errores 404 del script de analítica
+- [ ] Corregir el favicon 404 en la URL pública de GitHub Pages
