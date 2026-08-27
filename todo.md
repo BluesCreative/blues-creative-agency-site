@@ -263,3 +263,18 @@
 - [x] Confirmar que no se modifiquen estructura, contenido, imágenes ni funcionalidades
 - [x] Ejecutar pruebas, build y verificación visual responsive
 - [ ] Publicar la nueva paleta en Netlify y guardar checkpoint (pendiente: el conector Netlify devuelve 403 después de reautorizar)
+
+
+## Nuevo sitio solicitado en Netlify
+- [ ] Verificar autorización y permisos actuales de Netlify
+- [ ] Preparar el build vigente para un sitio nuevo
+- [ ] Crear y desplegar el nuevo sitio en Netlify
+- [ ] Verificar el enlace nuevo y sus funcionalidades principales
+
+
+## Publicación solicitada en GitHub
+- [ ] Verificar autenticación y cuenta de GitHub disponibles
+- [ ] Preparar el proyecto para GitHub Pages sin modificar el diseño ni el contenido
+- [ ] Crear un repositorio nuevo y subir el proyecto
+- [ ] Activar GitHub Pages o la publicación equivalente
+- [ ] Verificar el enlace público y entregar repositorio y URL
