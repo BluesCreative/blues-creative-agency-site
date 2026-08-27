@@ -150,7 +150,28 @@ function vitePluginManusDebugCollector(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
+function vitePluginGitHubPagesAnalyticsGuard(): Plugin {
+  return {
+    name: "github-pages-analytics-guard",
+    enforce: "post",
+    transformIndexHtml(html) {
+      if (process.env.GITHUB_PAGES !== "true") return html;
+      return html.replace(
+        '<script defer src="%VITE_ANALYTICS_ENDPOINT%/umami" data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>',
+        ""
+      );
+    },
+  };
+}
+
+const plugins = [
+  react(),
+  tailwindcss(),
+  jsxLocPlugin(),
+  vitePluginManusRuntime(),
+  vitePluginManusDebugCollector(),
+  vitePluginGitHubPagesAnalyticsGuard(),
+];
 
 export default defineConfig({
   base: process.env.GITHUB_PAGES ? "/blues-creative-agency-site/" : "/",

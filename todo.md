@@ -262,14 +262,14 @@
 - [x] Reemplazar los tokens de color por Navy/Obsidian #070D1A, Dark Blue #081421, Cyan #00B1E3, Terracotta #E8734A, White #FFFFFF y Light Gray #F4F4F4
 - [x] Confirmar que no se modifiquen estructura, contenido, imágenes ni funcionalidades
 - [x] Ejecutar pruebas, build y verificación visual responsive
-- [ ] Publicar la nueva paleta en Netlify y guardar checkpoint (pendiente: el conector Netlify devuelve 403 después de reautorizar)
+- [x] Publicar la nueva paleta en Netlify y guardar checkpoint (supersedida por la publicación solicitada en GitHub Pages)
 
 
 ## Nuevo sitio solicitado en Netlify
-- [ ] Verificar autorización y permisos actuales de Netlify
-- [ ] Preparar el build vigente para un sitio nuevo
-- [ ] Crear y desplegar el nuevo sitio en Netlify
-- [ ] Verificar el enlace nuevo y sus funcionalidades principales
+- [x] Verificar autorización y permisos actuales de Netlify (supersedida por GitHub Pages)
+- [x] Preparar el build vigente para un sitio nuevo (supersedida por GitHub Pages)
+- [x] Crear y desplegar el nuevo sitio en Netlify (supersedida por GitHub Pages)
+- [x] Verificar el enlace nuevo y sus funcionalidades principales (supersedida por GitHub Pages)
 
 
 ## Publicación solicitada en GitHub
@@ -282,6 +282,9 @@
 - [x] Publicar el artefacto estático en gh-pages y activar Pages mediante la fuente de rama si el modo workflow no está habilitado
 - [x] Activar Pages manualmente desde la configuración del repositorio porque el token disponible no tiene permiso de administración de Pages
 - [x] Adaptar el router para servir Home bajo la subruta de GitHub Pages y corregir el 404 público
-- [ ] Configurar GitHub Pages para usar un backend tRPC público compatible mediante URL absoluta y CORS
-- [ ] Probar chat y formulario de contacto desde la URL de GitHub Pages sin enviar datos reales
-- [ ] Entregar nuevamente el repositorio y el enlace después de validar las funciones críticas
+- [x] Configurar GitHub Pages para usar un backend tRPC público compatible mediante URL absoluta y CORS
+- [x] Probar chat y formulario de contacto desde la URL de GitHub Pages sin enviar datos reales
+- [x] Entregar nuevamente el repositorio y el enlace después de validar las funciones críticas
+- [x] Evitar que GitHub Pages cargue el script de analítica placeholder y eliminar el error 404 de consola
+- [ ] Desplegar a GitHub Pages el build actualizado con el guard de analítica
+- [ ] Reejecutar la prueba pública y confirmar que no quedan errores 404 del script de analítica
