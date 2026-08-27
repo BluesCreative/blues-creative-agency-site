@@ -286,6 +286,6 @@
 - [x] Probar chat y formulario de contacto desde la URL de GitHub Pages sin enviar datos reales
 - [x] Entregar nuevamente el repositorio y el enlace después de validar las funciones críticas
 - [x] Evitar que GitHub Pages cargue el script de analítica placeholder y eliminar el error 404 de consola
-- [ ] Desplegar a GitHub Pages el build actualizado con el guard de analítica
-- [ ] Reejecutar la prueba pública y confirmar que no quedan errores 404 del script de analítica
-- [ ] Corregir el favicon 404 en la URL pública de GitHub Pages
+- [x] Desplegar a GitHub Pages el build actualizado con el guard de analítica
+- [x] Reejecutar la prueba pública y confirmar que no quedan errores 404 del script de analítica
+- [x] Corregir el favicon 404 en la URL pública de GitHub Pages
