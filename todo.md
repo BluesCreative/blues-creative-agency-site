@@ -279,3 +279,6 @@
 - [ ] Activar GitHub Pages o la publicación equivalente
 - [ ] Verificar el enlace público y entregar repositorio y URL
 - [ ] Corregir el conflicto de versiones de pnpm en el workflow de GitHub Pages y reintentar la publicación
+- [ ] Publicar el artefacto estático en gh-pages y activar Pages mediante la fuente de rama si el modo workflow no está habilitado
+- [ ] Activar Pages manualmente desde la configuración del repositorio porque el token disponible no tiene permiso de administración de Pages
+- [ ] Adaptar el router para servir Home bajo la subruta de GitHub Pages y corregir el 404 público
