@@ -278,3 +278,4 @@
 - [ ] Crear un repositorio nuevo y subir el proyecto
 - [ ] Activar GitHub Pages o la publicación equivalente
 - [ ] Verificar el enlace público y entregar repositorio y URL
+- [ ] Corregir el conflicto de versiones de pnpm en el workflow de GitHub Pages y reintentar la publicación
