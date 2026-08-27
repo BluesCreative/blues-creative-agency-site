@@ -273,12 +273,15 @@
 
 
 ## Publicación solicitada en GitHub
-- [ ] Verificar autenticación y cuenta de GitHub disponibles
-- [ ] Preparar el proyecto para GitHub Pages sin modificar el diseño ni el contenido
-- [ ] Crear un repositorio nuevo y subir el proyecto
-- [ ] Activar GitHub Pages o la publicación equivalente
-- [ ] Verificar el enlace público y entregar repositorio y URL
-- [ ] Corregir el conflicto de versiones de pnpm en el workflow de GitHub Pages y reintentar la publicación
-- [ ] Publicar el artefacto estático en gh-pages y activar Pages mediante la fuente de rama si el modo workflow no está habilitado
-- [ ] Activar Pages manualmente desde la configuración del repositorio porque el token disponible no tiene permiso de administración de Pages
-- [ ] Adaptar el router para servir Home bajo la subruta de GitHub Pages y corregir el 404 público
+- [x] Verificar autenticación y cuenta de GitHub disponibles
+- [x] Preparar el proyecto para GitHub Pages sin modificar el diseño ni el contenido
+- [x] Crear un repositorio nuevo y subir el proyecto
+- [x] Activar GitHub Pages o la publicación equivalente
+- [x] Verificar el enlace público y entregar repositorio y URL
+- [x] Corregir el conflicto de versiones de pnpm en el workflow de GitHub Pages y reintentar la publicación
+- [x] Publicar el artefacto estático en gh-pages y activar Pages mediante la fuente de rama si el modo workflow no está habilitado
+- [x] Activar Pages manualmente desde la configuración del repositorio porque el token disponible no tiene permiso de administración de Pages
+- [x] Adaptar el router para servir Home bajo la subruta de GitHub Pages y corregir el 404 público
+- [ ] Configurar GitHub Pages para usar un backend tRPC público compatible mediante URL absoluta y CORS
+- [ ] Probar chat y formulario de contacto desde la URL de GitHub Pages sin enviar datos reales
+- [ ] Entregar nuevamente el repositorio y el enlace después de validar las funciones críticas

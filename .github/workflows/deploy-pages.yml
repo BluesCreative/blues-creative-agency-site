@@ -36,6 +36,7 @@ jobs:
       - name: Build static site
         env:
           GITHUB_PAGES: 'true'
+          VITE_API_URL: https://bluescreat-z5qxfsrw.manus.space/api/trpc
         run: pnpm run build
 
       - name: Upload Pages artifact
