@@ -37,14 +37,14 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+        className="absolute inset-0 bg-[#070D1A]/80 backdrop-blur-sm"
         onClick={onClose}
         style={{ animation: 'fade-in 0.3s ease-out' }}
       />
 
       {/* Modal */}
       <div
-        className="relative z-10 w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-gradient-to-br from-[#0A1525] to-[#0a0e27] border-2 border-[#00B1E3] shadow-2xl"
+        className="relative z-10 w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-gradient-to-br from-[#081421] to-[#070D1A] border-2 border-[#00B1E3] shadow-2xl"
         style={{
           boxShadow: '0 0 40px rgba(0, 177, 227, 0.4), inset 0 0 20px rgba(0, 177, 227, 0.1)',
           animation: 'fade-in-up 0.4s ease-out',
@@ -79,7 +79,7 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
             <h2
               className="text-3xl md:text-4xl font-black mb-2"
               style={{
-                color: '#ffffff',
+                color: '#FFFFFF',
                 textShadow: '0 0 20px rgba(0, 177, 227, 0.5)',
               }}
             >
@@ -104,7 +104,7 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
             >
               {language === 'es' ? 'Descripción del Proyecto' : 'Project Description'}
             </h3>
-            <p className="text-gray-300 leading-relaxed text-base">
+            <p className="text-[#F4F4F4] leading-relaxed text-base">
               {project.fullDescription || project.description}
             </p>
           </div>
@@ -125,7 +125,7 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
                   controls
                   className="w-full"
                   style={{
-                    backgroundColor: '#000000',
+                    backgroundColor: '#070D1A',
                   }}
                 >
                   <source src={project.videoUrl} type="video/mp4" />
@@ -164,7 +164,7 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
                         APP
                       </span>
                     )}
-                    <span className="text-sm font-semibold text-gray-300">
+                    <span className="text-sm font-semibold text-[#F4F4F4]">
                       {software.name}
                     </span>
                   </div>

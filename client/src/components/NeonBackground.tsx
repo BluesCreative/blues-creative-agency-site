@@ -33,18 +33,18 @@ export const NeonBackground: React.FC = () => {
         vx: (Math.random() - 0.5) * 0.5,
         vy: (Math.random() - 0.5) * 0.5,
         size: Math.random() * 2,
-        color: Math.random() > 0.5 ? '#00ff00' : '#00ffff',
+        color: Math.random() > 0.5 ? '#E8734A' : '#00B1E3',
         life: Math.random() * 0.5 + 0.5,
       });
     }
 
     const animate = () => {
       // Clear canvas with dark background
-      ctx.fillStyle = '#0a0e27';
+      ctx.fillStyle = '#070D1A';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Draw grid lines
-      ctx.strokeStyle = 'rgba(0, 255, 255, 0.05)';
+      ctx.strokeStyle = 'rgba(0, 177, 227, 0.05)';
       ctx.lineWidth = 1;
       const gridSize = 50;
       for (let i = 0; i < canvas.width; i += gridSize) {
@@ -85,7 +85,7 @@ export const NeonBackground: React.FC = () => {
             vx: (Math.random() - 0.5) * 0.5,
             vy: (Math.random() - 0.5) * 0.5,
             size: Math.random() * 2,
-            color: Math.random() > 0.5 ? '#00ff00' : '#00ffff',
+            color: Math.random() > 0.5 ? '#E8734A' : '#00B1E3',
             life: Math.random() * 0.5 + 0.5,
           });
         }
@@ -113,7 +113,7 @@ export const NeonBackground: React.FC = () => {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 z-0 pointer-events-none"
-      style={{ background: '#0a0e27' }}
+      style={{ background: '#070D1A' }}
     />
   );
 };

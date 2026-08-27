@@ -37,7 +37,7 @@ export default function Navigation() {
     <nav
       className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b"
       style={{
-        backgroundColor: 'rgba(10, 14, 39, 0.95)',
+        backgroundColor: 'rgba(7, 13, 26, 0.95)',
         borderColor: '#00B1E3',
         boxShadow: '0 0 20px rgba(0, 177, 227, 0.2)',
       }}
@@ -66,7 +66,7 @@ export default function Navigation() {
               onClick={() => scrollToSection(item.id)}
               className="text-sm font-medium transition-all duration-300 hover:scale-110"
               style={{
-                color: '#ffffff',
+                color: '#FFFFFF',
                 textShadow: '0 0 5px rgba(0, 177, 227, 0.4)',
               }}
               onMouseEnter={(e) => {
@@ -74,7 +74,7 @@ export default function Navigation() {
                 e.currentTarget.style.textShadow = '0 0 10px rgba(0, 177, 227, 0.8), 0 0 20px rgba(0, 177, 227, 0.6)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.color = '#ffffff';
+                e.currentTarget.style.color = '#FFFFFF';
                 e.currentTarget.style.textShadow = '0 0 5px rgba(0, 177, 227, 0.4)';
               }}
             >
@@ -101,7 +101,7 @@ export default function Navigation() {
                 className="px-3 py-1 text-xs font-bold rounded transition-all duration-300"
                 style={{
                   backgroundColor: language === lang ? '#00B1E3' : 'transparent',
-                  color: language === lang ? '#000000' : '#00B1E3',
+                  color: language === lang ? '#070D1A' : '#00B1E3',
                   textShadow: language === lang ? 'none' : '0 0 5px rgba(0, 177, 227, 0.4)',
                 }}
               >
@@ -116,7 +116,7 @@ export default function Navigation() {
             className="font-bold px-6 py-2 rounded-full transition-all duration-300 hover:scale-110"
             style={{
               backgroundColor: '#00B1E3',
-              color: '#000000',
+              color: '#070D1A',
               border: '2px solid #00B1E3',
               boxShadow: '0 0 20px rgba(0, 177, 227, 0.6)',
             }}
@@ -148,7 +148,7 @@ export default function Navigation() {
                 className="px-2 py-1 text-xs font-bold rounded transition-all duration-300"
                 style={{
                   backgroundColor: language === lang ? '#00B1E3' : 'transparent',
-                  color: language === lang ? '#000000' : '#00B1E3',
+                  color: language === lang ? '#070D1A' : '#00B1E3',
                 }}
               >
                 {lang.toUpperCase()}
@@ -173,7 +173,7 @@ export default function Navigation() {
       {isOpen && (
         <div
           style={{
-            backgroundColor: 'rgba(10, 14, 39, 0.98)',
+            backgroundColor: 'rgba(7, 13, 26, 0.98)',
             borderTop: '2px solid #00B1E3',
             boxShadow: '0 0 20px rgba(0, 177, 227, 0.2)',
           }}
@@ -202,7 +202,7 @@ export default function Navigation() {
               className="w-full font-bold mt-2 rounded-full"
               style={{
                 backgroundColor: '#00B1E3',
-                color: '#000000',
+                color: '#070D1A',
                 border: '2px solid #00B1E3',
                 boxShadow: '0 0 20px rgba(0, 177, 227, 0.6)',
               }}

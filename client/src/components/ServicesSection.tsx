@@ -180,7 +180,7 @@ export default function ServicesSection() {
   const selectedService = t.services.find((service) => service.id === activeService);
 
   return (
-    <section id="services" className="relative py-20 md:py-32 overflow-hidden" style={{ background: '#0a0e27' }}>
+    <section id="services" className="relative py-20 md:py-32 overflow-hidden" style={{ background: '#070D1A' }}>
       <div className="absolute inset-0 opacity-5">
         <div
           style={{
@@ -211,13 +211,13 @@ export default function ServicesSection() {
             className={`font-black text-2xl md:text-5xl font-bold mb-4 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
             style={{
               animationDelay: '0.1s',
-              color: '#ffffff',
+              color: '#FFFFFF',
               textShadow: '0 0 20px rgba(0, 177, 227, 0.5), 0 0 40px rgba(0, 177, 227, 0.3)',
             }}
           >
             {t.title}
           </h2>
-          <p className={`text-sm md:text-lg text-gray-300 max-w-2xl mx-auto ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
+          <p className={`text-sm md:text-lg text-[#F4F4F4] max-w-2xl mx-auto ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
             {t.subtitle}
           </p>
 
@@ -227,7 +227,7 @@ export default function ServicesSection() {
             <div className="h-1 w-12 rounded-full" style={{ background: 'linear-gradient(to left, transparent, #00B1E3)' }}></div>
           </div>
 
-          <p className="mt-5 text-xs uppercase tracking-[0.24em] text-cyan-200/70">{t.processHint}</p>
+          <p className="mt-5 text-xs uppercase tracking-[0.24em] text-[#00B1E3]/70">{t.processHint}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
@@ -246,17 +246,17 @@ export default function ServicesSection() {
                 }`}
                 style={{
                   animationDelay: isVisible ? `${0.4 + index * 0.1}s` : '0s',
-                  backgroundColor: isActive ? 'rgba(0, 177, 227, 0.14)' : '#0A1525',
-                  border: `2px solid ${isActive ? '#ffffff' : '#00B1E3'}`,
+                  backgroundColor: isActive ? 'rgba(0, 177, 227, 0.14)' : '#081421',
+                  border: `2px solid ${isActive ? '#FFFFFF' : '#00B1E3'}`,
                   boxShadow: isActive ? '0 0 40px rgba(0, 177, 227, 0.65), inset 0 0 24px rgba(0, 177, 227, 0.16)' : '0 0 20px rgba(0, 177, 227, 0.3)',
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.boxShadow = '0 0 40px rgba(0, 177, 227, 0.6), 0 0 60px rgba(0, 177, 227, 0.4), inset 0 0 20px rgba(0, 177, 227, 0.2)';
-                  e.currentTarget.style.borderColor = '#ffffff';
+                  e.currentTarget.style.borderColor = '#FFFFFF';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.boxShadow = isActive ? '0 0 40px rgba(0, 177, 227, 0.65), inset 0 0 24px rgba(0, 177, 227, 0.16)' : '0 0 20px rgba(0, 177, 227, 0.3)';
-                  e.currentTarget.style.borderColor = isActive ? '#ffffff' : '#00B1E3';
+                  e.currentTarget.style.borderColor = isActive ? '#FFFFFF' : '#00B1E3';
                 }}
               >
                 <div className="relative z-10 space-y-4">
@@ -270,11 +270,11 @@ export default function ServicesSection() {
                     <Icon className="w-6 h-6" style={{ color: '#00B1E3', filter: 'drop-shadow(0 0 5px rgba(0, 177, 227, 0.5))' }} />
                   </div>
 
-                  <h3 className="font-bold text-xl transition-colors duration-300" style={{ color: '#ffffff', textShadow: '0 0 10px rgba(0, 177, 227, 0.4)' }}>
+                  <h3 className="font-bold text-xl transition-colors duration-300" style={{ color: '#FFFFFF', textShadow: '0 0 10px rgba(0, 177, 227, 0.4)' }}>
                     {service.title}
                   </h3>
 
-                  <p className="text-sm text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                  <p className="text-sm text-[#F4F4F4] leading-relaxed group-hover:text-[#F4F4F4] transition-colors duration-300">
                     {service.description}
                   </p>
 
@@ -294,21 +294,21 @@ export default function ServicesSection() {
             className="mt-8 rounded-2xl border-2 p-5 md:p-8 animate-fade-in-up"
             style={{
               borderColor: '#00B1E3',
-              background: 'linear-gradient(135deg, rgba(10, 21, 37, 0.98), rgba(0, 177, 227, 0.12))',
+              background: 'linear-gradient(135deg, rgba(8, 20, 33, 0.98), rgba(0, 177, 227, 0.12))',
               boxShadow: '0 0 35px rgba(0, 177, 227, 0.35), inset 0 0 28px rgba(0, 177, 227, 0.08)',
             }}
           >
             <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.25em]" style={{ color: '#00B1E3' }}>{t.processLabel}</p>
-                <h3 className="mt-2 text-2xl md:text-3xl font-bold text-white" style={{ textShadow: '0 0 16px rgba(0, 177, 227, 0.45)' }}>
+                <h3 className="mt-2 text-2xl md:text-3xl font-bold text-[#FFFFFF]" style={{ textShadow: '0 0 16px rgba(0, 177, 227, 0.45)' }}>
                   {selectedService.title}
                 </h3>
               </div>
               <button
                 type="button"
                 onClick={() => setActiveService(null)}
-                className="inline-flex items-center gap-2 self-start rounded-full border border-cyan-300/70 px-3 py-2 text-xs font-semibold text-cyan-100 transition hover:bg-cyan-300/10"
+                className="inline-flex items-center gap-2 self-start rounded-full border border-[#00B1E3]/70 px-3 py-2 text-xs font-semibold text-[#00B1E3] transition hover:bg-[#00B1E3]/10"
               >
                 <X className="h-4 w-4" />
                 {t.close}
@@ -319,15 +319,15 @@ export default function ServicesSection() {
               {selectedService.process.map((step, index) => (
                 <div
                   key={step.title}
-                  className="relative rounded-xl border border-cyan-300/30 bg-[#0A1525]/80 p-4 animate-fade-in-up"
+                  className="relative rounded-xl border border-[#00B1E3]/30 bg-[#081421]/80 p-4 animate-fade-in-up"
                   style={{ animationDelay: `${index * 70}ms`, boxShadow: '0 0 18px rgba(0, 177, 227, 0.12)' }}
                 >
                   <div className="mb-4 flex items-center justify-between">
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full border border-cyan-300/70 text-sm font-bold text-cyan-200">{index + 1}</span>
-                    <CheckCircle2 className="h-4 w-4 text-cyan-300" />
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#00B1E3]/70 text-sm font-bold text-[#00B1E3]">{index + 1}</span>
+                    <CheckCircle2 className="h-4 w-4 text-[#00B1E3]" />
                   </div>
-                  <h4 className="text-sm font-bold text-white">{step.title}</h4>
-                  <p className="mt-2 text-xs leading-relaxed text-slate-300">{step.text}</p>
+                  <h4 className="text-sm font-bold text-[#FFFFFF]">{step.title}</h4>
+                  <p className="mt-2 text-xs leading-relaxed text-[#F4F4F4]">{step.text}</p>
                 </div>
               ))}
             </div>

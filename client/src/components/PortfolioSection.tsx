@@ -19,7 +19,7 @@ const translations = {
           { name: 'Illustrator', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968502.png' },
           { name: 'Premiere Pro', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968534.png' },
         ],
-        color: 'from-orange-500 to-red-500',
+        color: 'from-[#E8734A] to-[#081421]',
       },
       {
         id: 2,
@@ -32,7 +32,7 @@ const translations = {
           { name: 'Illustrator', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968502.png' },
           { name: 'Photoshop', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968520.png' },
         ],
-        color: 'from-emerald-500 to-cyan-500',
+        color: 'from-[#E8734A] to-[#00B1E3]',
       },
       {
         id: 3,
@@ -51,7 +51,7 @@ const translations = {
           { name: 'tRPC', icon: 'https://cdn.simpleicons.org/trpc/2596BE' },
           { name: 'Drizzle ORM', icon: 'https://cdn.simpleicons.org/drizzle/C5F74F' },
         ],
-        color: 'from-cyan-500 to-blue-500',
+        color: 'from-[#00B1E3] to-[#081421]',
       },
       {
         id: 4,
@@ -66,7 +66,7 @@ const translations = {
           { name: 'Premiere Pro', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968534.png' },
           { name: 'CapCut' },
         ],
-        color: 'from-purple-500 to-pink-500',
+        color: 'from-[#E8734A] to-[#00B1E3]',
       },
       {
         id: 5,
@@ -81,7 +81,7 @@ const translations = {
           { name: 'TypeScript', icon: 'https://cdn.simpleicons.org/typescript/3178C6' },
           { name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs/339933' },
         ],
-        color: 'from-green-500 to-emerald-500',
+        color: 'from-[#00B1E3] to-[#081421]',
       },
     ],
   },
@@ -101,7 +101,7 @@ const translations = {
           { name: 'Illustrator', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968502.png' },
           { name: 'Premiere Pro', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968534.png' },
         ],
-        color: 'from-orange-500 to-red-500',
+        color: 'from-[#E8734A] to-[#081421]',
       },
       {
         id: 2,
@@ -114,7 +114,7 @@ const translations = {
           { name: 'Illustrator', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968502.png' },
           { name: 'Photoshop', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968520.png' },
         ],
-        color: 'from-emerald-500 to-cyan-500',
+        color: 'from-[#E8734A] to-[#00B1E3]',
       },
       {
         id: 3,
@@ -133,7 +133,7 @@ const translations = {
           { name: 'tRPC', icon: 'https://cdn.simpleicons.org/trpc/2596BE' },
           { name: 'Drizzle ORM', icon: 'https://cdn.simpleicons.org/drizzle/C5F74F' },
         ],
-        color: 'from-cyan-500 to-blue-500',
+        color: 'from-[#00B1E3] to-[#081421]',
       },
       {
         id: 4,
@@ -148,7 +148,7 @@ const translations = {
           { name: 'Premiere Pro', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968534.png' },
           { name: 'CapCut' },
         ],
-        color: 'from-purple-500 to-pink-500',
+        color: 'from-[#E8734A] to-[#00B1E3]',
       },
       {
         id: 5,
@@ -163,7 +163,7 @@ const translations = {
           { name: 'TypeScript', icon: 'https://cdn.simpleicons.org/typescript/3178C6' },
           { name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs/339933' },
         ],
-        color: 'from-green-500 to-emerald-500',
+        color: 'from-[#00B1E3] to-[#081421]',
       },
     ],
   },
@@ -252,7 +252,7 @@ export default function PortfolioSection() {
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A1525] via-transparent to-transparent opacity-80" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#081421] via-transparent to-transparent opacity-80" />
                   </div>
                 )}
 

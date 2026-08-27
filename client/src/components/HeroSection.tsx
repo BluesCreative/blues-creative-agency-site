@@ -32,7 +32,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20" style={{ background: '#0a0e27' }}>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20" style={{ background: '#070D1A' }}>
       {/* Neon Background with Particles */}
       <NeonBackground />
 
@@ -71,7 +71,7 @@ export default function HeroSection() {
           className="text-3xl md:text-7xl font-black mb-4 md:mb-6 leading-tight max-w-4xl animate-fade-in-up"
           style={{
             animationDelay: '0.2s',
-            color: '#ffffff',
+            color: '#FFFFFF',
             textShadow: `
               0 0 20px rgba(0, 177, 227, 0.6),
               0 0 40px rgba(0, 177, 227, 0.4),
@@ -84,7 +84,7 @@ export default function HeroSection() {
         </h1>
 
         {/* Description */}
-        <p className="text-sm md:text-xl text-gray-300 mb-6 md:mb-8 max-w-2xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+        <p className="text-sm md:text-xl text-[#F4F4F4] mb-6 md:mb-8 max-w-2xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
           {t.description}
         </p>
 
@@ -96,7 +96,7 @@ export default function HeroSection() {
             className="px-8 py-6 text-lg font-bold rounded-full border-2 transition-all duration-300 hover:scale-105"
             style={{
               backgroundColor: '#00B1E3',
-              color: '#000000',
+              color: '#070D1A',
               borderColor: '#00B1E3',
               boxShadow: '0 0 20px rgba(0, 177, 227, 0.6), inset 0 0 10px rgba(0, 177, 227, 0.3)',
             }}

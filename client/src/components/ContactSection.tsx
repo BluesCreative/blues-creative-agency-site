@@ -122,7 +122,7 @@ export default function ContactSection() {
       id="contact"
       className="relative py-20 overflow-hidden"
       style={{
-        background: 'linear-gradient(135deg, #0a0e27 0%, #0d1a3a 50%, #0a0e27 100%)',
+        background: 'linear-gradient(135deg, #070D1A 0%, #081421 50%, #070D1A 100%)',
       }}
     >
       {/* Decorative background elements */}
@@ -145,13 +145,13 @@ export default function ContactSection() {
           <h2
             className="text-4xl md:text-5xl font-black mb-4"
             style={{
-              color: '#ffffff',
+              color: '#FFFFFF',
               textShadow: '0 0 20px rgba(0, 177, 227, 0.6)',
             }}
           >
             {t.title}
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-[#F4F4F4] text-lg max-w-2xl mx-auto">
             {t.subtitle}
           </p>
         </div>
@@ -188,7 +188,7 @@ export default function ContactSection() {
                 <Mail size={24} style={{ color: '#00B1E3' }} />
                 <span className="text-white font-bold">Email</span>
               </div>
-              <p className="text-gray-300 text-sm break-all">{t.emailContact}</p>
+              <p className="text-[#F4F4F4] text-sm break-all">{t.emailContact}</p>
             </a>
 
             {/* Phone Card */}
@@ -213,7 +213,7 @@ export default function ContactSection() {
                 <Phone size={24} style={{ color: '#00B1E3' }} />
                 <span className="text-white font-bold">Teléfono</span>
               </div>
-              <p className="text-gray-300 text-sm">{t.phoneContact}</p>
+              <p className="text-[#F4F4F4] text-sm">{t.phoneContact}</p>
             </a>
 
             {/* WhatsApp Card */}
@@ -240,7 +240,7 @@ export default function ContactSection() {
                 <MessageCircle size={24} style={{ color: '#00B1E3' }} />
                 <span className="text-white font-bold">WhatsApp</span>
               </div>
-              <p className="text-gray-300 text-sm">{t.phoneContact}</p>
+              <p className="text-[#F4F4F4] text-sm">{t.phoneContact}</p>
             </a>
 
             {/* Response Time */}
@@ -251,7 +251,7 @@ export default function ContactSection() {
                 border: '1px solid rgba(0, 177, 227, 0.3)',
               }}
             >
-              <p className="text-gray-400 text-sm">⏱️ {t.responseTime}</p>
+              <p className="text-[#F4F4F4] text-sm">⏱️ {t.responseTime}</p>
             </div>
           </div>
 
@@ -279,9 +279,9 @@ export default function ContactSection() {
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg transition-all duration-300"
                     style={{
-                      backgroundColor: 'rgba(10, 14, 39, 0.8)',
-                      border: fieldErrors.name ? '2px solid #ff4444' : '2px solid #00B1E3',
-                      color: '#ffffff',
+                      backgroundColor: 'rgba(7, 13, 26, 0.8)',
+                      border: fieldErrors.name ? '2px solid #E8734A' : '2px solid #00B1E3',
+                      color: '#FFFFFF',
                     }}
                     onFocus={(e) => {
                       e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.4)';
@@ -291,7 +291,7 @@ export default function ContactSection() {
                     }}
                   />
                   {fieldErrors.name && (
-                    <p className="text-red-400 text-xs mt-1">{fieldErrors.name}</p>
+                    <p className="text-[#E8734A] text-xs mt-1">{fieldErrors.name}</p>
                   )}
                 </div>
 
@@ -307,9 +307,9 @@ export default function ContactSection() {
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg transition-all duration-300"
                     style={{
-                      backgroundColor: 'rgba(10, 14, 39, 0.8)',
-                      border: fieldErrors.email ? '2px solid #ff4444' : '2px solid #00B1E3',
-                      color: '#ffffff',
+                      backgroundColor: 'rgba(7, 13, 26, 0.8)',
+                      border: fieldErrors.email ? '2px solid #E8734A' : '2px solid #00B1E3',
+                      color: '#FFFFFF',
                     }}
                     onFocus={(e) => {
                       e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.4)';
@@ -319,7 +319,7 @@ export default function ContactSection() {
                     }}
                   />
                   {fieldErrors.email && (
-                    <p className="text-red-400 text-xs mt-1">{fieldErrors.email}</p>
+                    <p className="text-[#E8734A] text-xs mt-1">{fieldErrors.email}</p>
                   )}
                 </div>
               </div>
@@ -336,9 +336,9 @@ export default function ContactSection() {
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   className="w-full px-4 py-3 rounded-lg transition-all duration-300"
                   style={{
-                    backgroundColor: 'rgba(10, 14, 39, 0.8)',
-                    border: fieldErrors.subject ? '2px solid #ff4444' : '2px solid #00B1E3',
-                    color: '#ffffff',
+                    backgroundColor: 'rgba(7, 13, 26, 0.8)',
+                    border: fieldErrors.subject ? '2px solid #E8734A' : '2px solid #00B1E3',
+                    color: '#FFFFFF',
                   }}
                   onFocus={(e) => {
                     e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.4)';
@@ -348,7 +348,7 @@ export default function ContactSection() {
                   }}
                 />
                 {fieldErrors.subject && (
-                  <p className="text-red-400 text-xs mt-1">{fieldErrors.subject}</p>
+                  <p className="text-[#E8734A] text-xs mt-1">{fieldErrors.subject}</p>
                 )}
               </div>
 
@@ -364,9 +364,9 @@ export default function ContactSection() {
                   rows={5}
                   className="w-full px-4 py-3 rounded-lg transition-all duration-300 resize-none"
                   style={{
-                    backgroundColor: 'rgba(10, 14, 39, 0.8)',
-                    border: fieldErrors.message ? '2px solid #ff4444' : '2px solid #00B1E3',
-                    color: '#ffffff',
+                    backgroundColor: 'rgba(7, 13, 26, 0.8)',
+                    border: fieldErrors.message ? '2px solid #E8734A' : '2px solid #00B1E3',
+                    color: '#FFFFFF',
                   }}
                   onFocus={(e) => {
                     e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.4)';
@@ -376,7 +376,7 @@ export default function ContactSection() {
                   }}
                 />
                 {fieldErrors.message && (
-                  <p className="text-red-400 text-xs mt-1">{fieldErrors.message}</p>
+                  <p className="text-[#E8734A] text-xs mt-1">{fieldErrors.message}</p>
                 )}
               </div>
 
@@ -385,14 +385,14 @@ export default function ContactSection() {
                 <div
                   className="p-4 rounded-lg mb-6 flex items-center gap-3"
                   style={{
-                    backgroundColor: 'rgba(34, 197, 94, 0.1)',
-                    border: '2px solid #22c55e',
+                    backgroundColor: 'rgba(0, 177, 227, 0.1)',
+                    border: '2px solid #00B1E3',
                   }}
                 >
-                  <CheckCircle size={20} style={{ color: '#22c55e' }} />
+                  <CheckCircle size={20} style={{ color: '#00B1E3' }} />
                   <div>
-                    <p className="text-green-400 font-bold text-sm">{t.success}</p>
-                    <p className="text-green-300 text-xs">{statusMessage}</p>
+                    <p className="text-[#00B1E3] font-bold text-sm">{t.success}</p>
+                    <p className="text-[#00B1E3] text-xs">{statusMessage}</p>
                   </div>
                 </div>
               )}
@@ -401,14 +401,14 @@ export default function ContactSection() {
                 <div
                   className="p-4 rounded-lg mb-6 flex items-center gap-3"
                   style={{
-                    backgroundColor: 'rgba(239, 68, 68, 0.1)',
-                    border: '2px solid #ef4444',
+                    backgroundColor: 'rgba(232, 115, 74, 0.1)',
+                    border: '2px solid #E8734A',
                   }}
                 >
-                  <AlertCircle size={20} style={{ color: '#ef4444' }} />
+                  <AlertCircle size={20} style={{ color: '#E8734A' }} />
                   <div>
-                    <p className="text-red-400 font-bold text-sm">{t.error}</p>
-                    <p className="text-red-300 text-xs">{statusMessage}</p>
+                    <p className="text-[#E8734A] font-bold text-sm">{t.error}</p>
+                    <p className="text-[#E8734A] text-xs">{statusMessage}</p>
                   </div>
                 </div>
               )}
@@ -420,7 +420,7 @@ export default function ContactSection() {
                 className="w-full py-3 rounded-lg font-bold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
                 style={{
                   backgroundColor: '#00B1E3',
-                  color: '#000000',
+                  color: '#070D1A',
                   border: '2px solid #00B1E3',
                   boxShadow: '0 0 20px rgba(0, 177, 227, 0.6)',
                 }}

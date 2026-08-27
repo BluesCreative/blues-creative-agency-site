@@ -61,7 +61,7 @@ export default function Footer() {
     <footer
       className="relative pt-20 pb-8"
       style={{
-        background: 'linear-gradient(135deg, #0a0e27 0%, #0d1a3a 50%, #0a0e27 100%)',
+        background: 'linear-gradient(135deg, #070D1A 0%, #081421 50%, #070D1A 100%)',
         borderTop: '2px solid #00B1E3',
         boxShadow: '0 -10px 40px rgba(0, 177, 227, 0.1)',
       }}
@@ -89,7 +89,7 @@ export default function Footer() {
                 }}
               />
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-[#F4F4F4] text-sm leading-relaxed">
               {t.description}
             </p>
             {/* Social Media Icons */}
@@ -106,7 +106,7 @@ export default function Footer() {
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = '#00B1E3';
-                  e.currentTarget.style.color = '#000000';
+                  e.currentTarget.style.color = '#070D1A';
                   e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.6)';
                 }}
                 onMouseLeave={(e) => {
@@ -129,7 +129,7 @@ export default function Footer() {
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = '#00B1E3';
-                  e.currentTarget.style.color = '#000000';
+                  e.currentTarget.style.color = '#070D1A';
                   e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.6)';
                 }}
                 onMouseLeave={(e) => {
@@ -152,7 +152,7 @@ export default function Footer() {
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = '#00B1E3';
-                  e.currentTarget.style.color = '#000000';
+                  e.currentTarget.style.color = '#070D1A';
                   e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.6)';
                 }}
                 onMouseLeave={(e) => {
@@ -175,7 +175,7 @@ export default function Footer() {
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = '#00B1E3';
-                  e.currentTarget.style.color = '#000000';
+                  e.currentTarget.style.color = '#070D1A';
                   e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 177, 227, 0.6)';
                 }}
                 onMouseLeave={(e) => {
@@ -191,7 +191,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-6" style={{ textShadow: '0 0 10px rgba(0, 177, 227, 0.4)' }}>
+            <h3 className="text-[#FFFFFF] font-bold text-lg mb-6" style={{ textShadow: '0 0 10px rgba(0, 177, 227, 0.4)' }}>
               {t.quickLinks}
             </h3>
             <ul className="space-y-3">
@@ -204,7 +204,7 @@ export default function Footer() {
                 <li key={item.id}>
                   <button
                     onClick={() => scrollToSection(item.id)}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    className="text-[#F4F4F4] hover:text-[#00B1E3] transition-colors duration-300 text-sm"
                   >
                     {item.label}
                   </button>
@@ -215,13 +215,13 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-6" style={{ textShadow: '0 0 10px rgba(0, 177, 227, 0.4)' }}>
+            <h3 className="text-[#FFFFFF] font-bold text-lg mb-6" style={{ textShadow: '0 0 10px rgba(0, 177, 227, 0.4)' }}>
               {t.services_title}
             </h3>
             <ul className="space-y-3">
               {[t.branding, t.webDesign, t.development, t.content, t.aiSolutions].map((service) => (
                 <li key={service}>
-                  <span className="text-gray-400 text-sm hover:text-cyan-400 transition-colors duration-300 cursor-pointer">
+                  <span className="text-[#F4F4F4] text-sm hover:text-[#00B1E3] transition-colors duration-300 cursor-pointer">
                     {service}
                   </span>
                 </li>
@@ -231,14 +231,14 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-6" style={{ textShadow: '0 0 10px rgba(0, 177, 227, 0.4)' }}>
+            <h3 className="text-[#FFFFFF] font-bold text-lg mb-6" style={{ textShadow: '0 0 10px rgba(0, 177, 227, 0.4)' }}>
               {t.contactInfo}
             </h3>
             <div className="space-y-4">
               {/* Email */}
               <a
                 href={`mailto:${t.email}`}
-                className="flex items-center gap-3 text-gray-400 hover:text-cyan-400 transition-colors duration-300 group"
+                className="flex items-center gap-3 text-[#F4F4F4] hover:text-[#00B1E3] transition-colors duration-300 group"
               >
                 <Mail
                   size={20}
@@ -253,7 +253,7 @@ export default function Footer() {
               {/* Phone */}
               <a
                 href={`tel:${t.phone.replace(/\s/g, '')}`}
-                className="flex items-center gap-3 text-gray-400 hover:text-cyan-400 transition-colors duration-300 group"
+                className="flex items-center gap-3 text-[#F4F4F4] hover:text-[#00B1E3] transition-colors duration-300 group"
               >
                 <Phone
                   size={20}
@@ -270,7 +270,7 @@ export default function Footer() {
                 href="https://wa.me/573137621044"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-gray-400 hover:text-cyan-400 transition-colors duration-300 group"
+                className="flex items-center gap-3 text-[#F4F4F4] hover:text-[#00B1E3] transition-colors duration-300 group"
               >
                 <MessageCircle
                   size={20}
@@ -283,7 +283,7 @@ export default function Footer() {
               </a>
 
               {/* Location */}
-              <div className="flex items-center gap-3 text-gray-400">
+              <div className="flex items-center gap-3 text-[#F4F4F4]">
                 <MapPin
                   size={20}
                   style={{
@@ -308,7 +308,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Copyright */}
-          <p className="text-gray-500 text-sm text-center md:text-left">
+          <p className="text-[#F4F4F4] text-sm text-center md:text-left">
             {t.copyright}
           </p>
 
@@ -320,7 +320,7 @@ export default function Footer() {
             className="mt-6 md:mt-0 px-6 py-2 rounded-full font-bold text-sm transition-all duration-300 hover:scale-105"
             style={{
               backgroundColor: '#00B1E3',
-              color: '#000000',
+              color: '#070D1A',
               border: '2px solid #00B1E3',
               boxShadow: '0 0 15px rgba(0, 177, 227, 0.5)',
             }}

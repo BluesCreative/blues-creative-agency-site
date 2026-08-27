@@ -256,3 +256,10 @@
 - [x] Reemplazar la portada de Fuego en la tarjeta y el modal del portafolio
 - [x] Ejecutar pruebas y build de producción
 - [x] Publicar en Netlify y verificar la tarjeta y el modal en la URL pública
+
+
+## Actualización exclusiva de paleta cromática
+- [x] Reemplazar los tokens de color por Navy/Obsidian #070D1A, Dark Blue #081421, Cyan #00B1E3, Terracotta #E8734A, White #FFFFFF y Light Gray #F4F4F4
+- [x] Confirmar que no se modifiquen estructura, contenido, imágenes ni funcionalidades
+- [x] Ejecutar pruebas, build y verificación visual responsive
+- [ ] Publicar la nueva paleta en Netlify y guardar checkpoint (pendiente: el conector Netlify devuelve 403 después de reautorizar)
