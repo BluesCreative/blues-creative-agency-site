@@ -289,3 +289,8 @@
 - [x] Desplegar a GitHub Pages el build actualizado con el guard de analítica
 - [x] Reejecutar la prueba pública y confirmar que no quedan errores 404 del script de analítica
 - [x] Corregir el favicon 404 en la URL pública de GitHub Pages
+- [x] Reemplazar el logo superior con un isotipo que muestre únicamente BC
+- [x] Verificar el isotipo BC en desktop y móvil y publicar la actualización
+- [ ] Publicar el cambio del isotipo BC en el repositorio y desplegarlo en GitHub Pages
+- [ ] Verificar en la URL pública que el encabezado muestre solo el isotipo BC en desktop y móvil
+- [ ] Guardar un checkpoint final después de confirmar la publicación del nuevo logo

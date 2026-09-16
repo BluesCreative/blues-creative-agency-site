@@ -44,14 +44,19 @@ export default function Navigation() {
     >
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
-        <img
-          src="https://bluescreat-z5qxfsrw.manus.space/manus-storage/blues-logo-outline_16e6773d_9bbe9948.png"
-          alt="Blue's Creative Agency"
-          className="h-12 w-auto transition-all duration-300 hover:scale-105"
-          style={{
-            filter: 'drop-shadow(0 0 10px rgba(0, 177, 227, 0.4))',
-          }}
-        />
+        <div
+          role="img"
+          aria-label="Isotipo BC"
+          className="relative h-11 w-14 shrink-0 overflow-hidden transition-all duration-300 hover:scale-105"
+          style={{ filter: 'drop-shadow(0 0 10px rgba(0, 177, 227, 0.4))' }}
+        >
+          <img
+            src="https://bluescreat-z5qxfsrw.manus.space/manus-storage/blues-logo-outline_16e6773d_9bbe9948.png"
+            alt=""
+            aria-hidden="true"
+            className="absolute left-[-22px] top-[-4px] h-[75px] w-[75px] max-w-none"
+          />
+        </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
